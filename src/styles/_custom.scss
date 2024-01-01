@@ -14,8 +14,8 @@
 body {
   font-family: theme("fontFamily.sans");
   font-size: theme("fontSize.base");
-  color: theme("colors.gray.100");
-  background-color: theme("colors.gray.900");
+  color: theme("colors.neutral.100");
+  background-color: theme("colors.neutral.900");
   position: relative;
 
   &.theme-dark,

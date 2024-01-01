@@ -4,4 +4,26 @@ import MainLayoutAstro from "../layouts/main.layout.astro"
 
 <MainLayoutAstro>
   <h2 class="text-3xl">Duplicate Paragraph Scanner</h2>
+
+  <nav class="flex flex-wrap gap-4 items-center">
+    <a href="#dup-para-form">Form</a>
+    <a href="#dup-para-result">Result</a>
+  </nav>
+
+  <section id="dup-para-form" class="section section-dup-para section-dup-para-form">
+    <form action="#" method="post" class="form form-shadow | flow">
+      <div class="form__group form__group-required">
+        <label for="input-urls" class="form__label">URLs</label>
+  
+        <input type="text" class="form__field" id="input-urls" required>
+      </div>
+  
+      <div class="form__buttons">
+        <button class="btn btn-blue" type="submit">Submit</button>
+        <button class="btn btn-slate" type="reset">Reset</button>
+      </div>
+    </form>
+  </section>
+
+  <section id="dup-para-result" class="section section-dup-para section-dup-para-result"></section>
 </MainLayoutAstro>
