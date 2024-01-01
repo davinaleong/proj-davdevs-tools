@@ -1,7 +1,19 @@
 ---
 import MainLayoutAstro from "../layouts/main.layout.astro"
+import type { LinkInterface } from "../lib/interfaces.lib";
+import links from "../lib/links.lib";
 ---
 
 <MainLayoutAstro>
   <h2 class="text-3xl">Home</h2>
+
+  <div class="cards-grid">
+	{links.map(({ label, url, target, title }: LinkInterface) => {
+		return (
+			<div class="card">
+				<a href={url} title={title} target={target ? target : "_self"}>{label}</a>
+			</div>
+		)
+	  })}
+  </div>
 </MainLayoutAstro>

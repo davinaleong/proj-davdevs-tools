@@ -1,0 +1,27 @@
+/// Cards
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: theme("gap.4");
+}
+
+.card {
+  background-color: theme("colors.slate.800");
+  background-image: linear-gradient(
+    to bottom,
+    theme("colors.slate.800"),
+    theme("colors.slate.700")
+  );
+  padding: theme("padding.4");
+  border-radius: theme("borderRadius.sm");
+  box-shadow: theme("boxShadow.md");
+
+  a {
+    --_a-clr: theme("colors.slate.300");
+    --_a-td: none;
+
+    --_a-hover-clr: theme("colors.slate.300");
+    --_a-hover-td: underline;
+  }
+}

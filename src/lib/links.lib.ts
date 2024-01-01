@@ -3,7 +3,7 @@ import type { LinkInterface } from "./interfaces.lib"
 const links: LinkInterface[] = [
   {
     label: "Duplicated Paragrapgh Scanner",
-    url: "/duplicate-paragraph-scanner",
+    url: "/duplicated-paragraph-scanner",
     title: "Duplicated Paragrapgh Scanner page",
   },
   {
