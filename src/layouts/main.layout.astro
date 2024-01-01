@@ -1,17 +1,16 @@
 ---
 import "../styles/app.scss"
-import favicon from "../assets/images/logo.svg"
+import favicon from "../assets/images/logo-png.png"
 import PrimaryHeader from "../components/primary-header.component.astro"
 import PrimaryFooter from "../components/primary-footer.component.astro"
 
 const { APP_NAME, APP_AUTHOR, APP_DESCRIPTION, APP_KEYWORDS } = import.meta.env
+
+const { title } = Astro.props
+const theTitle: string = title ? `${APP_NAME} - ${title}` : APP_NAME
 ---
 
 <html lang="en">
-	<a href="#main" class="btn btn-skip-navigation">
-		Skip Navigation
-	</a>
-
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -22,9 +21,13 @@ const { APP_NAME, APP_AUTHOR, APP_DESCRIPTION, APP_KEYWORDS } = import.meta.env
 
 		<link rel="icon" type="image/png" href={favicon.src} />
 
-		<title>{APP_NAME}</title>
+		<title>{theTitle}</title>
 	</head>
 	<body>
+		<a href="#main" class="btn btn-skip-navigation">
+			Skip Navigation
+		</a>
+
 		<PrimaryHeader />
 
 		<main id="main" class="primary-main">
