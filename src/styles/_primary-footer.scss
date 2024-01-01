@@ -1,10 +1,10 @@
 /// Primary Footer
 
 .primary-footer {
-  background-color: theme("colors.blue.100");
+  background-color: theme("colors.slate.800");
   background-image: linear-gradient(
     to bottom,
-    theme("colors.blue.100"),
-    theme("colors.blue.200")
+    theme("colors.slate.800"),
+    theme("colors.slate.700")
   );
 }
