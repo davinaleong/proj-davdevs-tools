@@ -6,7 +6,10 @@ const { APP_NAME, APP_DAVDEVS } = import.meta.env
         <div class="flex items-center justify-between">
             <h1 class="text-4xl font-bold">{APP_NAME}</h1>
 
-            <a href={APP_DAVDEVS}>Back to Dav/Devs</a>
+            <div class="flex items-center gap-4 p-4">
+                <a href="/">Home</a>
+                <a href={APP_DAVDEVS} target="_blank">Back to Dav/Devs</a>
+            </div>
         </div>
     </div>
 </header>
