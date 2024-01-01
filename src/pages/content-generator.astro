@@ -2,6 +2,137 @@
 import MainLayoutAstro from "../layouts/main.layout.astro"
 ---
 
-<MainLayoutAstro>
-  <h2 class="text-3xl">Home</h2>
+<MainLayoutAstro class="Content Generator">
+  <h2 class="text-3xl">Content Generator</h2>
+
+  <nav class="flex flex-wrap gap-4 items-center">
+    <a href="#content-generator-form">Form</a>
+    <a href="#content-generator-result">Result</a>
+  </nav>
+
+  <section id="content-generator-form" class="section section-content-generator section-content-generator-form">
+    <form action="#" method="post" class="form | flow">
+      <div class="form__buttons">
+        <button class="btn btn-sky" type="button">Add</button>
+      </div>
+  
+      <div class="form__fieldsets | flow">
+        <fieldset class="form__fieldset form__fieldset-shadow form__fieldset-grid">
+          <legend class="form__legend">Content #1</legend>
+  
+          <div class="form__group form__group-required">
+            <label for="title" class="form__label">Title</label>
+            <input type="text" id="title" name="title" class="form__field" required/>
+          </div>
+  
+          <div class="form__group form__group-required">
+            <label for="length" class="form__label">Length</label>
+            <input type="number" id="length" name="length" class="form__field" min="0" step="1" required/>
+          </div>
+  
+          <div class="form__group form__group-required">
+            <label for="length" class="form__label">Type</label>
+            <select name="type" id="type" class="form__field" required>
+              <option value="">-- Select --</option>
+              <option value="1">Characters</option>
+              <option value="2">Words</option>
+              <option value="3">Sentences</option>
+              <option value="4">Paragraphs</option>
+            </select>
+          </div>
+  
+          <div class="form__buttons">
+            <button class="btn btn-sm btn-red" type="button">Remove</button>
+          </div>
+        </fieldset>
+  
+        <fieldset class="form__fieldset form__fieldset-shadow form__fieldset-grid">
+          <legend class="form__legend">Content #2</legend>
+  
+          <div class="form__group form__group-required">
+            <label for="title" class="form__label">Title</label>
+            <input type="text" id="title" name="title" class="form__field" required/>
+          </div>
+  
+          <div class="form__group form__group-required">
+            <label for="length" class="form__label">Length</label>
+            <input type="number" id="length" name="length" class="form__field" min="0" step="1" required/>
+          </div>
+  
+          <div class="form__group form__group-required">
+            <label for="length" class="form__label">Type</label>
+            <select name="type" id="type" class="form__field" required>
+              <option value="">-- Select --</option>
+              <option value="1">Characters</option>
+              <option value="2">Words</option>
+              <option value="3">Sentences</option>
+              <option value="4">Paragraphs</option>
+            </select>
+          </div>
+  
+          <div class="form__buttons">
+            <button class="btn btn-sm btn-red" type="button">Remove</button>
+          </div>
+        </fieldset>
+  
+        <fieldset class="form__fieldset form__fieldset-shadow form__fieldset-grid">
+          <legend class="form__legend">Content #3</legend>
+  
+          <div class="form__group form__group-required">
+            <label for="title" class="form__label">Title</label>
+            <input type="text" id="title" name="title" class="form__field" required/>
+          </div>
+  
+          <div class="form__group form__group-required">
+            <label for="length" class="form__label">Length</label>
+            <input type="number" id="length" name="length" class="form__field" min="0" step="1" required/>
+          </div>
+  
+          <div class="form__group form__group-required">
+            <label for="length" class="form__label">Type</label>
+            <select name="type" id="type" class="form__field" required>
+              <option value="">-- Select --</option>
+              <option value="1">Characters</option>
+              <option value="2">Words</option>
+              <option value="3">Sentences</option>
+              <option value="4">Paragraphs</option>
+            </select>
+          </div>
+  
+          <div class="form__buttons">
+            <button class="btn btn-sm btn-red" type="button">Remove</button>
+          </div>
+        </fieldset>
+      </div>
+  
+      <div class="form__buttons">
+        <button class="btn btn-sky" type="button">Add</button>
+        <button class="btn btn-blue" type="submit">Submit</button>
+        <button class="btn btn-slate" type="reset">Reset</button>
+      </div>
+    </form>
+  </section>
+
+  <section id="content-generator-result" class="section section-content-generator section-content-generator-result | flow">
+    <h2 class="text-3xl">Result</h2>
+
+    <div class="section-content-generator__result | flow" data-element="result">
+      <p>
+        <strong>Title:</strong><br>
+        "Mastering Passwords: A Tech Guide"
+      </p>
+      <p>
+        <strong>Meta Description:</strong><br>
+        "Navigate the password maze effortlessly. Transform frustration into strategy with creative tips for crafting secure, memorable passwords. Tech solutions for everyone."
+      </p>
+      <p>
+        <strong>Synopsis:</strong><br>
+        "Decode the art of crafting secure passwords with tech-savvy tips. Turn the password game into a strategy, ensuring a seamless online experience."
+      </p>
+      <p>
+        <strong>Google Tags:</strong><br>
+        "passwords, security, tech tips, password strategy, online security, password management, strong passwords, tech solutions, cybersecurity, password game"
+      </p>
+    </div><!-- /data-element="result" -->
+  </section>
 </MainLayoutAstro>

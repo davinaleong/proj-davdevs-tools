@@ -1,0 +1,27 @@
+/// Content Generator
+
+.section-content-generator__result {
+  h1 {
+    font-size: theme("fontSize.4xl");
+  }
+
+  h2 {
+    font-size: theme("fontSize.3xl");
+  }
+
+  h3 {
+    font-size: theme("fontSize.2xl");
+  }
+
+  h4 {
+    font-size: theme("fontSize.3xl");
+  }
+
+  h5 {
+    font-size: theme("fontSize.2xl");
+  }
+
+  h6 {
+    font-size: theme("fontSize.xl");
+  }
+}

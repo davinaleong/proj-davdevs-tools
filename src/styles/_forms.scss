@@ -1,7 +1,10 @@
 .form {
   --_form-clr: theme("colors.neutral.100");
   --_form-bg-clr: theme("colors.slate.800");
-  --_form-border-clr: theme("colors.slate.600");
+  --_form-fieldset-bg-clr: theme("colors.neutral.800");
+  --_form-legend-bg-clr: theme("colors.neutral.900");
+  --_form-field-bg-clr: theme("colors.neutral.800");
+  --_form-border-clr: theme("colors.neutral.600");
   --_form-border: thin solid var(--_form-border-clr);
 
   --_form-spacer-block: theme("padding.2");
@@ -13,7 +16,7 @@
   &__fieldset {
     --_form-fieldset-spacer: theme("padding.4");
 
-    background-color: var(--_form-bg-clr);
+    background-color: var(--_form-fieldset-bg-clr);
 
     &-bordered {
       border-block-start: var(--_form-border);
@@ -46,13 +49,27 @@
         padding-inline-end: var(--_form-spacer-inline);
       }
     }
+
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: theme("gap.4");
+
+      .form__buttons {
+        grid-column: 1 / -1;
+      }
+
+      textarea.form__field {
+        grid-column: 1 / -1;
+      }
+    }
   }
 
   &__legend {
     font-weight: theme("fontWeight.semibold");
     text-transform: uppercase;
     letter-spacing: theme("letterSpacing.1");
-    background-color: var(--_form-bg-clr);
+    background-color: var(--_form-legend-bg-clr);
   }
 
   &__group {
@@ -71,21 +88,21 @@
 
       &-warning {
         --_form-clr: theme("colors.amber.200");
-        --_form-bg-clr: theme("colors.amber.800");
+        --_form-field-bg-clr: theme("colors.amber.800");
         --_form-border-clr: theme("colors.amber.600");
         --_form-border: thin solid var(--_form-border-clr);
       }
 
       &-error {
         --_form-clr: theme("colors.red.200");
-        --_form-bg-clr: theme("colors.red.800");
+        --_form-field-bg-clr: theme("colors.red.800");
         --_form-border-clr: theme("colors.red.600");
         --_form-border: thin solid var(--_form-border-clr);
       }
 
       &-success {
         --_form-clr: theme("colors.green.200");
-        --_form-bg-clr: theme("colors.green.800");
+        --_form-field-bg-clr: theme("colors.green.800");
         --_form-border-clr: theme("colors.green.600");
         --_form-border: thin solid var(--_form-border-clr);
       }
@@ -97,7 +114,7 @@
   }
 
   &__field {
-    background-color: var(--_form-bg-clr);
+    background-color: var(--_form-field-bg-clr);
     border-block-end: var(--_form-border);
     display: block;
     width: 100%;
@@ -105,6 +122,7 @@
     padding-block-end: var(--_form-spacer-block);
     padding-inline-start: var(--_form-spacer-inline);
     padding-inline-end: var(--_form-spacer-inline);
+    min-height: theme("fontSize.base");
 
     &-bordered {
       border-block-start: var(--_form-border);
@@ -123,139 +141,139 @@
     }
 
     &-dark {
-      --_form-bg-clr: theme("colors.neutral.100");
+      --_form-field-bg-clr: theme("colors.neutral.100");
       --_form-border-clr: theme("colors.neutral.700");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-light {
-      --_form-bg-clr: theme("colors.neutral.800");
+      --_form-field-bg-clr: theme("colors.neutral.800");
       --_form-border-clr: theme("colors.neutral.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-gray {
-      --_form-bg-clr: theme("colors.gray.950");
+      --_form-field-bg-clr: theme("colors.gray.950");
       --_form-border-clr: theme("colors.gray.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-zinc {
-      --_form-bg-clr: theme("colors.zinc.950");
+      --_form-field-bg-clr: theme("colors.zinc.950");
       --_form-border-clr: theme("colors.zinc.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-neutral {
-      --_form-bg-clr: theme("colors.neutral.800");
+      --_form-field-bg-clr: theme("colors.neutral.800");
       --_form-border-clr: theme("colors.neutral.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-stone {
-      --_form-bg-clr: theme("colors.stone.950");
+      --_form-field-bg-clr: theme("colors.stone.950");
       --_form-border-clr: theme("colors.stone.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-red {
-      --_form-bg-clr: theme("colors.red.950");
+      --_form-field-bg-clr: theme("colors.red.950");
       --_form-border-clr: theme("colors.red.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-orange {
-      --_form-bg-clr: theme("colors.orange.950");
+      --_form-field-bg-clr: theme("colors.orange.950");
       --_form-border-clr: theme("colors.orange.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-amber {
-      --_form-bg-clr: theme("colors.amber.950");
+      --_form-field-bg-clr: theme("colors.amber.950");
       --_form-border-clr: theme("colors.amber.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-yellow {
-      --_form-bg-clr: theme("colors.yellow.950");
+      --_form-field-bg-clr: theme("colors.yellow.950");
       --_form-border-clr: theme("colors.yellow.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-lime {
-      --_form-bg-clr: theme("colors.lime.950");
+      --_form-field-bg-clr: theme("colors.lime.950");
       --_form-border-clr: theme("colors.lime.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-green {
-      --_form-bg-clr: theme("colors.green.950");
+      --_form-field-bg-clr: theme("colors.green.950");
       --_form-border-clr: theme("colors.green.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-emerald {
-      --_form-bg-clr: theme("colors.emerald.950");
+      --_form-field-bg-clr: theme("colors.emerald.950");
       --_form-border-clr: theme("colors.emerald.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-teal {
-      --_form-bg-clr: theme("colors.teal.950");
+      --_form-field-bg-clr: theme("colors.teal.950");
       --_form-border-clr: theme("colors.teal.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-cyan {
-      --_form-bg-clr: theme("colors.cyan.950");
+      --_form-field-bg-clr: theme("colors.cyan.950");
       --_form-border-clr: theme("colors.cyan.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-sky {
-      --_form-bg-clr: theme("colors.sky.950");
+      --_form-field-bg-clr: theme("colors.sky.950");
       --_form-border-clr: theme("colors.sky.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-blue {
-      --_form-bg-clr: theme("colors.blue.950");
+      --_form-field-bg-clr: theme("colors.blue.950");
       --_form-border-clr: theme("colors.blue.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-indigo {
-      --_form-bg-clr: theme("colors.indigo.950");
+      --_form-field-bg-clr: theme("colors.indigo.950");
       --_form-border-clr: theme("colors.indigo.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-violet {
-      --_form-bg-clr: theme("colors.violet.950");
+      --_form-field-bg-clr: theme("colors.violet.950");
       --_form-border-clr: theme("colors.violet.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-purple {
-      --_form-bg-clr: theme("colors.purple.950");
+      --_form-field-bg-clr: theme("colors.purple.950");
       --_form-border-clr: theme("colors.purple.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-fuchsia {
-      --_form-bg-clr: theme("colors.fuchsia.950");
+      --_form-field-bg-clr: theme("colors.fuchsia.950");
       --_form-border-clr: theme("colors.fuchsia.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-pink {
-      --_form-bg-clr: theme("colors.pink.950");
+      --_form-field-bg-clr: theme("colors.pink.950");
       --_form-border-clr: theme("colors.pink.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
 
     &-rose {
-      --_form-bg-clr: theme("colors.rose.950");
+      --_form-field-bg-clr: theme("colors.rose.950");
       --_form-border-clr: theme("colors.rose.600");
       --_form-border: thin solid var(--_form-border-clr);
     }
@@ -288,139 +306,139 @@
   }
 
   &-dark {
-    --_form-bg-clr: theme("colors.neutral.100");
+    --_form-field-bg-clr: theme("colors.neutral.100");
     --_form-border-clr: theme("colors.neutral.700");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-light {
-    --_form-bg-clr: theme("colors.neutral.800");
+    --_form-field-bg-clr: theme("colors.neutral.800");
     --_form-border-clr: theme("colors.neutral.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-gray {
-    --_form-bg-clr: theme("colors.gray.950");
+    --_form-field-bg-clr: theme("colors.gray.950");
     --_form-border-clr: theme("colors.gray.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-zinc {
-    --_form-bg-clr: theme("colors.zinc.950");
+    --_form-field-bg-clr: theme("colors.zinc.950");
     --_form-border-clr: theme("colors.zinc.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-neutral {
-    --_form-bg-clr: theme("colors.neutral.800");
+    --_form-field-bg-clr: theme("colors.neutral.800");
     --_form-border-clr: theme("colors.neutral.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-stone {
-    --_form-bg-clr: theme("colors.stone.950");
+    --_form-field-bg-clr: theme("colors.stone.950");
     --_form-border-clr: theme("colors.stone.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-red {
-    --_form-bg-clr: theme("colors.red.950");
+    --_form-field-bg-clr: theme("colors.red.950");
     --_form-border-clr: theme("colors.red.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-orange {
-    --_form-bg-clr: theme("colors.orange.950");
+    --_form-field-bg-clr: theme("colors.orange.950");
     --_form-border-clr: theme("colors.orange.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-amber {
-    --_form-bg-clr: theme("colors.amber.950");
+    --_form-field-bg-clr: theme("colors.amber.950");
     --_form-border-clr: theme("colors.amber.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-yellow {
-    --_form-bg-clr: theme("colors.yellow.950");
+    --_form-field-bg-clr: theme("colors.yellow.950");
     --_form-border-clr: theme("colors.yellow.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-lime {
-    --_form-bg-clr: theme("colors.lime.950");
+    --_form-field-bg-clr: theme("colors.lime.950");
     --_form-border-clr: theme("colors.lime.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-green {
-    --_form-bg-clr: theme("colors.green.950");
+    --_form-field-bg-clr: theme("colors.green.950");
     --_form-border-clr: theme("colors.green.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-emerald {
-    --_form-bg-clr: theme("colors.emerald.950");
+    --_form-field-bg-clr: theme("colors.emerald.950");
     --_form-border-clr: theme("colors.emerald.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-teal {
-    --_form-bg-clr: theme("colors.teal.950");
+    --_form-field-bg-clr: theme("colors.teal.950");
     --_form-border-clr: theme("colors.teal.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-cyan {
-    --_form-bg-clr: theme("colors.cyan.950");
+    --_form-field-bg-clr: theme("colors.cyan.950");
     --_form-border-clr: theme("colors.cyan.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-sky {
-    --_form-bg-clr: theme("colors.sky.950");
+    --_form-field-bg-clr: theme("colors.sky.950");
     --_form-border-clr: theme("colors.sky.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-blue {
-    --_form-bg-clr: theme("colors.blue.950");
+    --_form-field-bg-clr: theme("colors.blue.950");
     --_form-border-clr: theme("colors.blue.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-indigo {
-    --_form-bg-clr: theme("colors.indigo.950");
+    --_form-field-bg-clr: theme("colors.indigo.950");
     --_form-border-clr: theme("colors.indigo.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-violet {
-    --_form-bg-clr: theme("colors.violet.950");
+    --_form-field-bg-clr: theme("colors.violet.950");
     --_form-border-clr: theme("colors.violet.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-purple {
-    --_form-bg-clr: theme("colors.purple.950");
+    --_form-field-bg-clr: theme("colors.purple.950");
     --_form-border-clr: theme("colors.purple.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-fuchsia {
-    --_form-bg-clr: theme("colors.fuchsia.950");
+    --_form-field-bg-clr: theme("colors.fuchsia.950");
     --_form-border-clr: theme("colors.fuchsia.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-pink {
-    --_form-bg-clr: theme("colors.pink.950");
+    --_form-field-bg-clr: theme("colors.pink.950");
     --_form-border-clr: theme("colors.pink.600");
     --_form-border: thin solid var(--_form-border-clr);
   }
 
   &-rose {
-    --_form-bg-clr: theme("colors.rose.950");
+    --_form-field-bg-clr: theme("colors.rose.950");
     --_form-border-clr: theme("colors.rose.600");
     --_form-border: thin solid var(--_form-border-clr);
   }

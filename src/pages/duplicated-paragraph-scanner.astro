@@ -2,7 +2,7 @@
 import MainLayoutAstro from "../layouts/main.layout.astro"
 ---
 
-<MainLayoutAstro>
+<MainLayoutAstro title="Duplicate Paragraph Scanner">
   <h2 class="text-3xl">Duplicate Paragraph Scanner</h2>
 
   <nav class="flex flex-wrap gap-4 items-center">
@@ -25,36 +25,38 @@ import MainLayoutAstro from "../layouts/main.layout.astro"
     </form>
   </section>
 
-  <section id="dup-para-result" class="section section-dup-para section-dup-para-result flow">
+  <section id="dup-para-result" class="section section-dup-para section-dup-para-result | flow">
     <h3 class="text-2xl">Results</h3>
 
-    <table class="table table-bordered table-striped table-colored-slate">
-      <thead>
-        <tr>
-          <th>Paragraph</th>
-          <th>Content</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut tortor vel sem iaculis congue. Sed dapibus, neque ut aliquam fringilla, felis ligula hendrerit libero.</p>
-          </td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>
-            <p>Fusce vel justo eget lacus cursus luctus. Ut non risus sit amet quam fringilla facilisis eu in justo. Aliquam auctor dolor ut augue aliquam.</p>
-          </td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>
-            <p>Nulla facilisi. Proin accumsan purus vel massa fermentum dapibus. Duis vel urna nec erat consectetur eleifend. Pellentesque non mauris vel sapien semper bibendum.</p>
-          </td>
-          <td>1</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="section-dup-para__result" data-element="result">
+      <table class="table table-bordered table-striped table-colored-slate">
+        <thead>
+          <tr>
+            <th>Paragraph</th>
+            <th>Content</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut tortor vel sem iaculis congue. Sed dapibus, neque ut aliquam fringilla, felis ligula hendrerit libero.</p>
+            </td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>
+              <p>Fusce vel justo eget lacus cursus luctus. Ut non risus sit amet quam fringilla facilisis eu in justo. Aliquam auctor dolor ut augue aliquam.</p>
+            </td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>
+              <p>Nulla facilisi. Proin accumsan purus vel massa fermentum dapibus. Duis vel urna nec erat consectetur eleifend. Pellentesque non mauris vel sapien semper bibendum.</p>
+            </td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!-- /data-element="result" -->
   </section>
 </MainLayoutAstro>
