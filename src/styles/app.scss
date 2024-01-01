@@ -1,0 +1,13 @@
+// Main CSS Script
+
+@tailwind base;
+@tailwind components;
+
+@import "./fonts";
+@import "./custom";
+@import "./project";
+@import "./buttons";
+@import "./tables";
+@import "./forms";
+
+@tailwind utilities;

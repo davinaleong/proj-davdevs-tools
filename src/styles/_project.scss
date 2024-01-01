@@ -1,0 +1,10 @@
+// Styles Specific to the Project
+.text-grid {
+  --_text-width: 20ch;
+  --_spacer: var(--v-400);
+
+  display: grid;
+  grid-template-columns: var(--_text-width) auto;
+  align-items: end;
+  gap: var(--_spacer);
+}

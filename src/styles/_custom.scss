@@ -1,0 +1,103 @@
+// General Custom Styles
+:root {
+  --content-width: theme("screens.xl");
+  --flow-spacer: theme("gap.4");
+}
+
+:focus {
+  outline: 2px solid theme("colors.neutral.950");
+  border: 2px solid theme("colors.neutral.50");
+}
+
+body {
+  font-family: theme("fontFamily.sans");
+  font-size: theme("fontSize.base");
+  color: theme("colors.gray.900");
+  background-color: theme("colors.gray.50");
+  position: relative;
+
+  &.theme-dark,
+  [data-theme="dark"] & {
+    color: theme("colors.gray.50");
+    background-color: theme("colors.gray.900");
+  }
+}
+
+a {
+  --_a-clr: theme("colors.blue.500");
+  --_a-td: none;
+
+  --_a-hover-clr: theme("colors.blue.500");
+  --_a-hover-td: underline;
+
+  color: var(--_a-clr);
+  text-decoration: var(--_a-td);
+
+  &:hover {
+    color: var(--_a-hover-clr);
+    text-decoration: var(--_a-hover-td);
+  }
+}
+
+.flow {
+  --_flow-spacer: var(--flow-spacer);
+
+  & > * + * {
+    margin-block-start: var(--_flow-spacer);
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.wrapper {
+  --_wrapper-width: var(--content-width);
+
+  width: min(100%, var(--_wrapper-width));
+}
+
+.content-grid {
+  --_width: var(--content-width);
+
+  display: grid;
+  grid-template-columns: 0.1fr [breakout-start] 0.2fr [content-start] 1fr [content-end] 0.2fr [breakout-end] 0.1fr;
+
+  & > * {
+    grid-column: content;
+  }
+
+  &-breakout {
+    & > * {
+      grid-column: breakout;
+    }
+  }
+
+  &-full-width {
+    & > * {
+      grid-column: full-width;
+    }
+  }
+}
+
+ul,
+ol {
+  &.list {
+    padding-inline-start: theme("padding.5");
+  }
+}
+
+ul.list {
+  list-style-type: disc;
+}
+
+ol.list {
+  list-style-type: decimal;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: theme("colors.gray.50");
+    background-color: theme("colors.gray.900");
+  }
+}

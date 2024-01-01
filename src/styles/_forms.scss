@@ -1,0 +1,427 @@
+.form {
+  --_form-clr: theme("colors.neutral.950");
+  --_form-bg-clr: theme("colors.neutral.50");
+  --_form-border-clr: theme("colors.neutral.300");
+  --_form-border: thin solid var(--_form-border-clr);
+
+  --_form-spacer-block: theme("padding.2");
+  --_form-spacer-inline: theme("padding.3");
+
+  --_form-spacer-br: theme("borderRadius.sm");
+  --_form-shadow: theme("boxShadow.md");
+
+  &__fieldset {
+    --_form-fieldset-spacer: theme("padding.4");
+
+    background-color: var(--_form-bg-clr);
+
+    &-bordered {
+      border-block-start: var(--_form-border);
+      border-block-end: var(--_form-border);
+      border-inline-start: var(--_form-border);
+      border-inline-end: var(--_form-border);
+      border-radius: var(--_form-spacer-br);
+      padding-block-start: var(--_form-fieldset-spacer);
+      padding-block-end: var(--_form-fieldset-spacer);
+      padding-inline-start: var(--_form-fieldset-spacer);
+      padding-inline-end: var(--_form-fieldset-spacer);
+      border-radius: var(--_form-spacer-br);
+
+      .form__legend {
+        padding-inline-start: var(--_form-spacer-inline);
+        padding-inline-end: var(--_form-spacer-inline);
+      }
+    }
+
+    &-shadow {
+      padding-block-start: var(--_form-fieldset-spacer);
+      padding-block-end: var(--_form-fieldset-spacer);
+      padding-inline-start: var(--_form-fieldset-spacer);
+      padding-inline-end: var(--_form-fieldset-spacer);
+      border-radius: var(--_form-spacer-br);
+      box-shadow: var(--_form-shadow);
+
+      .form__legend {
+        padding-inline-start: var(--_form-spacer-inline);
+        padding-inline-end: var(--_form-spacer-inline);
+      }
+    }
+  }
+
+  &__legend {
+    font-weight: theme("fontWeight.semibold");
+    text-transform: uppercase;
+    letter-spacing: theme("letterSpacing.1");
+    background-color: var(--_form-bg-clr);
+  }
+
+  &__group {
+    &-required {
+      .form__label::after {
+        content: "*";
+        color: theme("colors.red.500");
+        margin-inline-start: theme("spacing.1");
+      }
+    }
+
+    &-status {
+      .form__label {
+        color: var(--_form-clr);
+      }
+
+      &-warning {
+        --_form-clr: theme("colors.amber.800");
+        --_form-bg-clr: theme("colors.amber.50");
+        --_form-border-clr: theme("colors.amber.300");
+        --_form-border: thin solid var(--_form-border-clr);
+      }
+
+      &-error {
+        --_form-clr: theme("colors.red.800");
+        --_form-bg-clr: theme("colors.red.50");
+        --_form-border-clr: theme("colors.red.300");
+        --_form-border: thin solid var(--_form-border-clr);
+      }
+
+      &-success {
+        --_form-clr: theme("colors.green.800");
+        --_form-bg-clr: theme("colors.green.50");
+        --_form-border-clr: theme("colors.green.300");
+        --_form-border: thin solid var(--_form-border-clr);
+      }
+    }
+  }
+
+  &__label {
+    display: block;
+  }
+
+  &__field {
+    background-color: var(--_form-bg-clr);
+    border-block-end: var(--_form-border);
+    display: block;
+    width: 100%;
+    padding-block-start: var(--_form-spacer-block);
+    padding-block-end: var(--_form-spacer-block);
+    padding-inline-start: var(--_form-spacer-inline);
+    padding-inline-end: var(--_form-spacer-inline);
+
+    &-bordered {
+      border-block-start: var(--_form-border);
+      border-inline-start: var(--_form-border);
+      border-inline-end: var(--_form-border);
+      border-radius: var(--_form-spacer-br);
+    }
+
+    &-shadow {
+      border-block-start: none;
+      border-block-end: none;
+      border-inline-start: none;
+      border-inline-end: none;
+      border-radius: var(--_form-spacer-br);
+      box-shadow: var(--_form-shadow);
+    }
+
+    &-dark {
+      --_form-bg-clr: theme("colors.neutral.950");
+      --_form-border-clr: theme("colors.neutral.700");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-light {
+      --_form-bg-clr: theme("colors.neutral.50");
+      --_form-border-clr: theme("colors.neutral.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-gray {
+      --_form-bg-clr: theme("colors.gray.50");
+      --_form-border-clr: theme("colors.gray.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-zinc {
+      --_form-bg-clr: theme("colors.zinc.50");
+      --_form-border-clr: theme("colors.zinc.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-neutral {
+      --_form-bg-clr: theme("colors.neutral.50");
+      --_form-border-clr: theme("colors.neutral.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-stone {
+      --_form-bg-clr: theme("colors.stone.50");
+      --_form-border-clr: theme("colors.stone.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-red {
+      --_form-bg-clr: theme("colors.red.50");
+      --_form-border-clr: theme("colors.red.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-orange {
+      --_form-bg-clr: theme("colors.orange.50");
+      --_form-border-clr: theme("colors.orange.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-amber {
+      --_form-bg-clr: theme("colors.amber.50");
+      --_form-border-clr: theme("colors.amber.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-yellow {
+      --_form-bg-clr: theme("colors.yellow.50");
+      --_form-border-clr: theme("colors.yellow.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-lime {
+      --_form-bg-clr: theme("colors.lime.50");
+      --_form-border-clr: theme("colors.lime.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-green {
+      --_form-bg-clr: theme("colors.green.50");
+      --_form-border-clr: theme("colors.green.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-emerald {
+      --_form-bg-clr: theme("colors.emerald.50");
+      --_form-border-clr: theme("colors.emerald.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-teal {
+      --_form-bg-clr: theme("colors.teal.50");
+      --_form-border-clr: theme("colors.teal.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-cyan {
+      --_form-bg-clr: theme("colors.cyan.50");
+      --_form-border-clr: theme("colors.cyan.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-sky {
+      --_form-bg-clr: theme("colors.sky.50");
+      --_form-border-clr: theme("colors.sky.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-blue {
+      --_form-bg-clr: theme("colors.blue.50");
+      --_form-border-clr: theme("colors.blue.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-indigo {
+      --_form-bg-clr: theme("colors.indigo.50");
+      --_form-border-clr: theme("colors.indigo.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-violet {
+      --_form-bg-clr: theme("colors.violet.50");
+      --_form-border-clr: theme("colors.violet.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-purple {
+      --_form-bg-clr: theme("colors.purple.50");
+      --_form-border-clr: theme("colors.purple.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-fuchsia {
+      --_form-bg-clr: theme("colors.fuchsia.50");
+      --_form-border-clr: theme("colors.fuchsia.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-pink {
+      --_form-bg-clr: theme("colors.pink.50");
+      --_form-border-clr: theme("colors.pink.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+
+    &-rose {
+      --_form-bg-clr: theme("colors.rose.50");
+      --_form-border-clr: theme("colors.rose.300");
+      --_form-border: thin solid var(--_form-border-clr);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: theme("gap.2");
+  }
+
+  &-bordered {
+    .form__field {
+      border-block-start: var(--_form-border);
+      border-inline-start: var(--_form-border);
+      border-inline-end: var(--_form-border);
+      border-radius: var(--_form-spacer-br);
+    }
+  }
+
+  &-shadow {
+    .form__field {
+      border-block-start: none;
+      border-block-end: none;
+      border-inline-start: none;
+      border-inline-end: none;
+      border-radius: var(--_form-spacer-br);
+      box-shadow: var(--_form-shadow);
+    }
+  }
+
+  &-dark {
+    --_form-bg-clr: theme("colors.neutral.950");
+    --_form-border-clr: theme("colors.neutral.700");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-light {
+    --_form-bg-clr: theme("colors.neutral.50");
+    --_form-border-clr: theme("colors.neutral.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-gray {
+    --_form-bg-clr: theme("colors.gray.50");
+    --_form-border-clr: theme("colors.gray.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-zinc {
+    --_form-bg-clr: theme("colors.zinc.50");
+    --_form-border-clr: theme("colors.zinc.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-neutral {
+    --_form-bg-clr: theme("colors.neutral.50");
+    --_form-border-clr: theme("colors.neutral.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-stone {
+    --_form-bg-clr: theme("colors.stone.50");
+    --_form-border-clr: theme("colors.stone.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-red {
+    --_form-bg-clr: theme("colors.red.50");
+    --_form-border-clr: theme("colors.red.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-orange {
+    --_form-bg-clr: theme("colors.orange.50");
+    --_form-border-clr: theme("colors.orange.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-amber {
+    --_form-bg-clr: theme("colors.amber.50");
+    --_form-border-clr: theme("colors.amber.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-yellow {
+    --_form-bg-clr: theme("colors.yellow.50");
+    --_form-border-clr: theme("colors.yellow.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-lime {
+    --_form-bg-clr: theme("colors.lime.50");
+    --_form-border-clr: theme("colors.lime.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-green {
+    --_form-bg-clr: theme("colors.green.50");
+    --_form-border-clr: theme("colors.green.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-emerald {
+    --_form-bg-clr: theme("colors.emerald.50");
+    --_form-border-clr: theme("colors.emerald.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-teal {
+    --_form-bg-clr: theme("colors.teal.50");
+    --_form-border-clr: theme("colors.teal.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-cyan {
+    --_form-bg-clr: theme("colors.cyan.50");
+    --_form-border-clr: theme("colors.cyan.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-sky {
+    --_form-bg-clr: theme("colors.sky.50");
+    --_form-border-clr: theme("colors.sky.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-blue {
+    --_form-bg-clr: theme("colors.blue.50");
+    --_form-border-clr: theme("colors.blue.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-indigo {
+    --_form-bg-clr: theme("colors.indigo.50");
+    --_form-border-clr: theme("colors.indigo.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-violet {
+    --_form-bg-clr: theme("colors.violet.50");
+    --_form-border-clr: theme("colors.violet.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-purple {
+    --_form-bg-clr: theme("colors.purple.50");
+    --_form-border-clr: theme("colors.purple.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-fuchsia {
+    --_form-bg-clr: theme("colors.fuchsia.50");
+    --_form-border-clr: theme("colors.fuchsia.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-pink {
+    --_form-bg-clr: theme("colors.pink.50");
+    --_form-border-clr: theme("colors.pink.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+
+  &-rose {
+    --_form-bg-clr: theme("colors.rose.50");
+    --_form-border-clr: theme("colors.rose.300");
+    --_form-border: thin solid var(--_form-border-clr);
+  }
+}
