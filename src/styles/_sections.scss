@@ -4,11 +4,4 @@ section {
   --_section-height: auto;
 
   min-height: var(--_section-height);
-  display: flex;
-  align-items: center;
-  min-height: var(--_section-height);
-
-  > * {
-    width: 100%;
-  }
 }

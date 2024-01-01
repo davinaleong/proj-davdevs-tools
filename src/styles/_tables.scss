@@ -7,11 +7,11 @@ table,
   --_table-spacer-block: theme("padding.2");
   --_table-spacer-inline: theme("padding.3");
 
-  --_table-clr: theme("colors.neutral.900");
-  --_table-clr-alt: theme("colors.neutral.900");
-  --_table-bg: theme("colors.neutral.50");
-  --_table-bg-alt: theme("colors.neutral.100");
-  --_table-border-clr: theme("colors.neutral.300");
+  --_table-clr: theme("colors.neutral.200");
+  --_table-clr-alt: theme("colors.neutral.200");
+  --_table-bg: theme("colors.neutral.950");
+  --_table-bg-alt: theme("colors.neutral.800");
+  --_table-border-clr: theme("colors.neutral.600");
   --_table-border: thin solid var(--_table-border-clr);
 
   text-align: left;
@@ -83,157 +83,157 @@ table,
 
   &-colored {
     &-slate {
-      --_table-clr-alt: theme("colors.slate.900");
-      --_table-bg: theme("colors.slate.50");
-      --_table-bg-alt: theme("colors.slate.100");
-      --_table-border-clr: theme("colors.slate.300");
+      --_table-clr-alt: theme("colors.slate.200");
+      --_table-bg: theme("colors.slate.950");
+      --_table-bg-alt: theme("colors.slate.800");
+      --_table-border-clr: theme("colors.slate.600");
     }
 
     &-gray {
-      --_table-clr-alt: theme("colors.gray.900");
-      --_table-bg: theme("colors.gray.50");
-      --_table-bg-alt: theme("colors.gray.100");
-      --_table-border-clr: theme("colors.gray.300");
+      --_table-clr-alt: theme("colors.gray.200");
+      --_table-bg: theme("colors.gray.950");
+      --_table-bg-alt: theme("colors.gray.800");
+      --_table-border-clr: theme("colors.gray.600");
     }
 
     &-zinc {
-      --_table-clr-alt: theme("colors.zinc.900");
-      --_table-bg: theme("colors.zinc.50");
-      --_table-bg-alt: theme("colors.zinc.100");
-      --_table-border-clr: theme("colors.zinc.300");
+      --_table-clr-alt: theme("colors.zinc.200");
+      --_table-bg: theme("colors.zinc.950");
+      --_table-bg-alt: theme("colors.zinc.800");
+      --_table-border-clr: theme("colors.zinc.600");
     }
 
     &-neutral {
-      --_table-clr-alt: theme("colors.neutral.900");
-      --_table-bg: theme("colors.neutral.50");
-      --_table-bg-alt: theme("colors.neutral.100");
-      --_table-border-clr: theme("colors.neutral.300");
+      --_table-clr-alt: theme("colors.neutral.200");
+      --_table-bg: theme("colors.neutral.950");
+      --_table-bg-alt: theme("colors.neutral.800");
+      --_table-border-clr: theme("colors.neutral.600");
     }
 
     &-stone {
-      --_table-clr-alt: theme("colors.stone.900");
-      --_table-bg: theme("colors.stone.50");
-      --_table-bg-alt: theme("colors.stone.100");
-      --_table-border-clr: theme("colors.stone.300");
+      --_table-clr-alt: theme("colors.stone.200");
+      --_table-bg: theme("colors.stone.950");
+      --_table-bg-alt: theme("colors.stone.800");
+      --_table-border-clr: theme("colors.stone.600");
     }
 
     &-red {
-      --_table-clr-alt: theme("colors.red.900");
-      --_table-bg: theme("colors.red.50");
-      --_table-bg-alt: theme("colors.red.100");
-      --_table-border-clr: theme("colors.red.300");
+      --_table-clr-alt: theme("colors.red.200");
+      --_table-bg: theme("colors.red.950");
+      --_table-bg-alt: theme("colors.red.800");
+      --_table-border-clr: theme("colors.red.600");
     }
 
     &-orange {
-      --_table-clr-alt: theme("colors.orange.900");
-      --_table-bg: theme("colors.orange.50");
-      --_table-bg-alt: theme("colors.orange.100");
-      --_table-border-clr: theme("colors.orange.300");
+      --_table-clr-alt: theme("colors.orange.200");
+      --_table-bg: theme("colors.orange.950");
+      --_table-bg-alt: theme("colors.orange.800");
+      --_table-border-clr: theme("colors.orange.600");
     }
 
     &-amber {
-      --_table-clr-alt: theme("colors.amber.900");
-      --_table-bg: theme("colors.amber.50");
-      --_table-bg-alt: theme("colors.amber.100");
-      --_table-border-clr: theme("colors.amber.300");
+      --_table-clr-alt: theme("colors.amber.200");
+      --_table-bg: theme("colors.amber.950");
+      --_table-bg-alt: theme("colors.amber.800");
+      --_table-border-clr: theme("colors.amber.600");
     }
 
     &-yellow {
-      --_table-clr-alt: theme("colors.yellow.900");
-      --_table-bg: theme("colors.yellow.50");
-      --_table-bg-alt: theme("colors.yellow.100");
-      --_table-border-clr: theme("colors.yellow.300");
+      --_table-clr-alt: theme("colors.yellow.200");
+      --_table-bg: theme("colors.yellow.950");
+      --_table-bg-alt: theme("colors.yellow.800");
+      --_table-border-clr: theme("colors.yellow.600");
     }
 
     &-lime {
-      --_table-clr-alt: theme("colors.lime.900");
-      --_table-bg: theme("colors.lime.50");
-      --_table-bg-alt: theme("colors.lime.100");
-      --_table-border-clr: theme("colors.lime.300");
+      --_table-clr-alt: theme("colors.lime.200");
+      --_table-bg: theme("colors.lime.950");
+      --_table-bg-alt: theme("colors.lime.800");
+      --_table-border-clr: theme("colors.lime.600");
     }
 
     &-green {
-      --_table-clr-alt: theme("colors.green.900");
-      --_table-bg: theme("colors.green.50");
-      --_table-bg-alt: theme("colors.green.100");
-      --_table-border-clr: theme("colors.green.300");
+      --_table-clr-alt: theme("colors.green.200");
+      --_table-bg: theme("colors.green.950");
+      --_table-bg-alt: theme("colors.green.800");
+      --_table-border-clr: theme("colors.green.600");
     }
 
     &-emerald {
-      --_table-clr-alt: theme("colors.emerald.900");
-      --_table-bg: theme("colors.emerald.50");
-      --_table-bg-alt: theme("colors.emerald.100");
-      --_table-border-clr: theme("colors.emerald.300");
+      --_table-clr-alt: theme("colors.emerald.200");
+      --_table-bg: theme("colors.emerald.950");
+      --_table-bg-alt: theme("colors.emerald.800");
+      --_table-border-clr: theme("colors.emerald.600");
     }
 
     &-teal {
-      --_table-clr-alt: theme("colors.teal.900");
-      --_table-bg: theme("colors.teal.50");
-      --_table-bg-alt: theme("colors.teal.100");
-      --_table-border-clr: theme("colors.teal.300");
+      --_table-clr-alt: theme("colors.teal.200");
+      --_table-bg: theme("colors.teal.950");
+      --_table-bg-alt: theme("colors.teal.800");
+      --_table-border-clr: theme("colors.teal.600");
     }
 
     &-cyan {
-      --_table-clr-alt: theme("colors.cyan.900");
-      --_table-bg: theme("colors.cyan.50");
-      --_table-bg-alt: theme("colors.cyan.100");
-      --_table-border-clr: theme("colors.cyan.300");
+      --_table-clr-alt: theme("colors.cyan.200");
+      --_table-bg: theme("colors.cyan.950");
+      --_table-bg-alt: theme("colors.cyan.800");
+      --_table-border-clr: theme("colors.cyan.600");
     }
 
     &-sky {
-      --_table-clr-alt: theme("colors.sky.900");
-      --_table-bg: theme("colors.sky.50");
-      --_table-bg-alt: theme("colors.sky.100");
-      --_table-border-clr: theme("colors.sky.300");
+      --_table-clr-alt: theme("colors.sky.200");
+      --_table-bg: theme("colors.sky.950");
+      --_table-bg-alt: theme("colors.sky.800");
+      --_table-border-clr: theme("colors.sky.600");
     }
 
     &-blue {
-      --_table-clr-alt: theme("colors.blue.900");
-      --_table-bg: theme("colors.blue.50");
-      --_table-bg-alt: theme("colors.blue.100");
-      --_table-border-clr: theme("colors.blue.300");
+      --_table-clr-alt: theme("colors.blue.200");
+      --_table-bg: theme("colors.blue.950");
+      --_table-bg-alt: theme("colors.blue.800");
+      --_table-border-clr: theme("colors.blue.600");
     }
 
     &-indigo {
-      --_table-clr-alt: theme("colors.indigo.900");
-      --_table-bg: theme("colors.indigo.50");
-      --_table-bg-alt: theme("colors.indigo.100");
-      --_table-border-clr: theme("colors.indigo.300");
+      --_table-clr-alt: theme("colors.indigo.200");
+      --_table-bg: theme("colors.indigo.950");
+      --_table-bg-alt: theme("colors.indigo.800");
+      --_table-border-clr: theme("colors.indigo.600");
     }
 
     &-violet {
-      --_table-clr-alt: theme("colors.violet.900");
-      --_table-bg: theme("colors.violet.50");
-      --_table-bg-alt: theme("colors.violet.100");
-      --_table-border-clr: theme("colors.violet.300");
+      --_table-clr-alt: theme("colors.violet.200");
+      --_table-bg: theme("colors.violet.950");
+      --_table-bg-alt: theme("colors.violet.800");
+      --_table-border-clr: theme("colors.violet.600");
     }
 
     &-purple {
-      --_table-clr-alt: theme("colors.purple.900");
-      --_table-bg: theme("colors.purple.50");
-      --_table-bg-alt: theme("colors.purple.100");
-      --_table-border-clr: theme("colors.purple.300");
+      --_table-clr-alt: theme("colors.purple.200");
+      --_table-bg: theme("colors.purple.950");
+      --_table-bg-alt: theme("colors.purple.800");
+      --_table-border-clr: theme("colors.purple.600");
     }
 
     &-fuchsia {
-      --_table-clr-alt: theme("colors.fuchsia.900");
-      --_table-bg: theme("colors.fuchsia.50");
-      --_table-bg-alt: theme("colors.fuchsia.100");
-      --_table-border-clr: theme("colors.fuchsia.300");
+      --_table-clr-alt: theme("colors.fuchsia.200");
+      --_table-bg: theme("colors.fuchsia.950");
+      --_table-bg-alt: theme("colors.fuchsia.800");
+      --_table-border-clr: theme("colors.fuchsia.600");
     }
 
     &-pink {
-      --_table-clr-alt: theme("colors.pink.900");
-      --_table-bg: theme("colors.pink.50");
-      --_table-bg-alt: theme("colors.pink.100");
-      --_table-border-clr: theme("colors.pink.300");
+      --_table-clr-alt: theme("colors.pink.200");
+      --_table-bg: theme("colors.pink.950");
+      --_table-bg-alt: theme("colors.pink.800");
+      --_table-border-clr: theme("colors.pink.600");
     }
 
     &-rose {
-      --_table-clr-alt: theme("colors.rose.900");
-      --_table-bg: theme("colors.rose.50");
-      --_table-bg-alt: theme("colors.rose.100");
-      --_table-border-clr: theme("colors.rose.300");
+      --_table-clr-alt: theme("colors.rose.200");
+      --_table-bg: theme("colors.rose.950");
+      --_table-bg-alt: theme("colors.rose.800");
+      --_table-border-clr: theme("colors.rose.600");
     }
   }
 }
@@ -257,7 +257,7 @@ table,
       content: attr(data-cell);
       font-weight: theme("fontWeight.bold");
       text-transform: capitalize;
-      // background-color: hsla(0, 0%, 100%, 0.5);
+      // background-color: hsla(0, 0%, 800%, 0.5);
     }
 
     &:first-of-type {
@@ -271,19 +271,19 @@ table,
     td,
     .td {
       &:nth-of-type(9) {
-        color: theme("colors.neutral.50");
+        color: theme("colors.neutral.950");
       }
 
       &:nth-of-type(10) {
-        color: theme("colors.neutral.50");
+        color: theme("colors.neutral.950");
       }
 
       &:nth-of-type(11) {
-        color: theme("colors.neutral.50");
+        color: theme("colors.neutral.950");
       }
 
       &:nth-of-type(12) {
-        color: theme("colors.neutral.50");
+        color: theme("colors.neutral.950");
       }
     }
   }
