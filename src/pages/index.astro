@@ -1,36 +1,7 @@
 ---
-import "../styles/app.scss"
-import favicon from "../assets/images/logo.svg"
-import PrimaryHeader from "../components/primary-header.component.astro"
-import PrimaryFooter from "../components/primary-footer.component.astro"
-
-const { APP_NAME, APP_AUTHOR, APP_DESCRIPTION, APP_KEYWORDS } = import.meta.env
+import MainLayoutAstro from "../layouts/main.layout.astro"
 ---
 
-<html lang="en">
-	<a href="#main" class="btn btn-skip-navigation">
-		Skip Navigation
-	</a>
-
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="author" content={APP_AUTHOR}>
-		<meta name="description" content={APP_DESCRIPTION}>
-		<meta name="keywords" content={APP_KEYWORDS}>
-
-		<link rel="icon" type="image/png" href={favicon.src} />
-
-		<title>{APP_NAME}</title>
-	</head>
-	<body>
-		<PrimaryHeader />
-
-		<main id="main" class="primary-main">
-			<div class="wrapper mx-auto p-4"></div>
-		</main>
-
-		<PrimaryFooter />
-	</body>
-</html>
+<MainLayoutAstro>
+  <h2 class="text-3xl">Home</h2>
+</MainLayoutAstro>

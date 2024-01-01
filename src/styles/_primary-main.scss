@@ -1,0 +1,7 @@
+/// Primary Main
+
+.primary-main {
+  &__wrapper {
+    min-height: calc(100vh - var(--primary-header) - var(--primary-footer));
+  }
+}
