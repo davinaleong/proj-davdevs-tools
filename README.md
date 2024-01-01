@@ -14,6 +14,12 @@ Welcome to Dav/Devs Tools, your central hub for a collection of handy developer 
 
 - **Typescript**: A superset of JavaScript that adds static types, improving code readability and catching errors early in the development process.
 
+Explore our growing collection of developer tools:
+
+1. **Duplicate Paragraphs Scanner**: Identify and manage duplicate paragraphs in your content effortlessly.
+
+2. **Content Generator**: Create dynamic and customizable content for your projects with ease.
+
 ## Getting Started
 
 1. Clone the repository to your local machine:
@@ -36,9 +42,9 @@ Welcome to Dav/Devs Tools, your central hub for a collection of handy developer 
 
 1. Open your browser and navigate to http://localhost:3000 to explore the microsite.
 
-## Challenges
+## License
 
-Browse through our solutions to Frontend Mentor challenges, each meticulously crafted using the latest web development technologies. Learn from our code, discover best practices, and improve your frontend skills.
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/davinaleong/proj-davdevs-tools/blob/main/LICENSE.md) file for details.
 
 ## Contribution
 
@@ -46,6 +52,6 @@ Feel free to contribute by submitting your solutions or enhancements. Follow our
 
 ## Feedback
 
-We welcome your feedback! If you have suggestions, improvements, or just want to say hello, please [open an issue](https://github.com/your_username/DavDevs-Tools/issues).
+We welcome your feedback! If you have suggestions, improvements, or just want to say hello, please [open an issue](https://github.com/davinaleong/proj-davdevs-tools/issues).
 
 Happy coding! 🚀
