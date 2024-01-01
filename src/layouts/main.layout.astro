@@ -28,7 +28,9 @@ const { APP_NAME, APP_AUTHOR, APP_DESCRIPTION, APP_KEYWORDS } = import.meta.env
 		<PrimaryHeader />
 
 		<main id="main" class="primary-main">
-			<div class="wrapper mx-auto p-4"></div>
+			<div class="wrapper mx-auto p-4">
+                <slot />
+            </div>
 		</main>
 
 		<PrimaryFooter />

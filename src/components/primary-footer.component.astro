@@ -1,0 +1,11 @@
+---
+const { APP_NAME, APP_YEAR } = import.meta.env
+
+const now = new Date().getFullYear()
+const copyrightYear: string = now === APP_YEAR ? `${APP_YEAR}` : `${APP_YEAR} - ${now}`
+---
+<footer class="primary-footer">
+    <div class="wrapper | mx-auto p-4">
+        <p class="text-center">{APP_NAME} &copy; {copyrightYear}</p>
+    </div>
+</footer>
