@@ -1,14 +1,15 @@
 ---
 import {
   getSecret,
- } from 'astro:env/server';
-import logo from "./../assets/images/Logo - Coloured.svg"
+ } from "astro:env/server";
 import "./../styles/global.css"
 
 const APP_NAME = getSecret("APP_NAME")
 const APP_DEVDEVS = getSecret("APP_DEVDEVS")
+const APP_YEAR = getSecret("APP_YEAR")
 
 import Header from "./../components/Header.astro"
+import Footer from "./../components/Footer.astro"
 
 // TODO: Fill og:image after deployment
 // <meta property="og:image" content={logo.url}>
@@ -36,5 +37,6 @@ import Header from "./../components/Header.astro"
 	<body id="top" class="text-black bg-slate-100 ff-montserrat">
 		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
