@@ -1,0 +1,26 @@
+---
+import {
+  getSecret,
+ } from 'astro:env/server';
+import logo from "./../assets/images/Logo - Coloured.svg"
+import { Image } from 'astro:assets'
+
+const APP_NAME = getSecret("APP_NAME")
+const APP_DEVDEVS = getSecret("APP_DEVDEVS")
+---
+<header class="text-white bg-blue-500 p-2 static">
+    <nav class="wrapper flex items-center justify-between mx-auto gap-4">
+        <a class="font-semibold" href={APP_DEVDEVS}>
+            Back to Portfolio
+        </a>
+
+        <a href="/" class="brand w-15">
+            <Image src={logo} alt={APP_NAME} class="brand__img" />
+            <span class="sr-only">{APP_NAME}</span>
+        </a>
+        
+        <a class="font-semibold" href="#top">
+            Back to Top
+        </a>
+    </nav>
+</header>

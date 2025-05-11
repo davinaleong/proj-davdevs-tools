@@ -1,22 +1,40 @@
+---
+import {
+  getSecret,
+ } from 'astro:env/server';
+import logo from "./../assets/images/Logo - Coloured.svg"
+import "./../styles/global.css"
+
+const APP_NAME = getSecret("APP_NAME")
+const APP_DEVDEVS = getSecret("APP_DEVDEVS")
+
+import Header from "./../components/Header.astro"
+
+// TODO: Fill og:image after deployment
+// <meta property="og:image" content={logo.url}>
+---
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Explore DavTools, a growing collection of practical web tools by Davina Develops — from QR code generators to password strength meters. Built with Astro, Tailwind, and TypeScript, each tool is designed for speed, usability, and clean code.">
+		<meta name="keywords" content="Davina Develops, DavTools, Web Tools, QR Code Generator, Password Strength Meter, Color Palettes, Astro SSG, Tailwind CSS, TypeScript, Developer Tools, Microsite, Frontend Utilities, Coding Portfolio">
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="author" content="Davina Leong">
+		<link rel="canonical" href={APP_DEVDEVS} />
+
+		<meta property="og:title" content={APP_NAME}>
+		<meta property="og:description" content="Explore DavTools, a growing collection of practical web tools by Davina Develops — from QR code generators to password strength meters. Built with Astro, Tailwind, and TypeScript, each tool is designed for speed, usability, and clean code.">
+		
+		<meta property="og:url" content={APP_DEVDEVS}>
+		<meta property="og:type" content="website">
+
 		<meta name="generator" content={Astro.generator} />
-		<title>Dav/Devs Tools</title>
+		<title>{APP_NAME}</title>
 	</head>
-	<body>
+	<body id="top" class="text-black bg-slate-100 ff-montserrat">
+		<Header />
 		<slot />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
