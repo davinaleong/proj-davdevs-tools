@@ -1,48 +1,74 @@
-# Astro Starter Kit: Basics
+# DavTools Microsite
 
-```sh
-npm create astro@latest -- --template basics
-```
+Welcome to the **DavTools Microsite** — a collection of practical, everyday web tools built to make your life easier!
+From QR code generators to password strength meters, this site offers sleek, efficient tools powered by a modern web stack.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+The microsite is built with **Astro** and deployed on **Netlify**.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 🚀 Tech Stack
 
-## 🚀 Project Structure
+- **Astro** → A lightning-fast static site generator that combines the simplicity of static sites with the flexibility of modern frameworks.
+- **Vite** → A next-generation frontend build tool that delivers fast and optimized development.
+- **Tailwind CSS** → A utility-first CSS framework for building responsive, beautiful interfaces quickly.
+- **Sass** → A powerful CSS preprocessor for writing maintainable and scalable styles.
+- **TypeScript** → A superset of JavaScript that adds static typing for improved reliability and developer experience.
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## ⚙️ Getting Started
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+1. **Clone the repository**
 
-## 🧞 Commands
+   ```bash
+   git clone [repository_url]
+   ```
 
-All commands are run from the root of the project, from a terminal:
+2. **Install dependencies**
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+   ```bash
+   npm install
+   ```
 
-## 👀 Want to learn more?
+3. **Start the development server**
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**
+
+   Visit [http://localhost:3000](http://localhost:3000) to explore the microsite.
+
+---
+
+## 🛠 Tools Included
+
+Explore a growing collection of tools, including:
+
+- ✅ QR Code Generator
+- ✅ Password Strength Meter
+- ✅ \[Add more here as you build]
+
+Each tool is designed with a focus on usability, clean code, and best practices — perfect for learning or everyday use!
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](https://github.com/davinaleong/proj-dav-fem-2024/blob/main/LICENSE.md).
+
+---
+
+## 🤝 Contribution
+
+Want to improve a tool or suggest a new one?
+Check out the [contribution guidelines](https://chat.openai.com/c/CONTRIBUTING.md) and feel free to submit a pull request!
+
+---
+
+## 💬 Feedback
+
+We’d love to hear from you!
+If you have suggestions, improvements, or just want to say hi, please [open an issue](https://github.com/davinaleong/proj-dav-fem-2024/issues).
