@@ -5,13 +5,13 @@ import tailwindcss from "@tailwindcss/vite"
 
 import mdx from "@astrojs/mdx"
 
-import { astroContent } from "@astrojs/content"
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
   vite: {
-    plugins: [tailwindcss(), astroContent()],
+    plugins: [tailwindcss()],
   },
 
-  integrations: [mdx()],
+  integrations: [mdx(), react()],
 })

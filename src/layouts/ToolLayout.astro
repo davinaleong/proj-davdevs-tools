@@ -1,18 +1,17 @@
 ---
-// ToolLayout.astro
+import Layout from './Layout.astro';
+
 const { title, description } = Astro.props;
-import Layout from "../layouts/Layout.astro";
+const Content = Astro.props.content;
+const components = Astro.props.components || {};
 ---
 
 <Layout>
-  <main class="relative overflow-hidden bg-f">
-    <section class="bg-blue-500 p-4 text-black text-center bg-h flow">
-      <h1 class="text-3xl font-bold">{title}</h1>
-      <p class="text-lg">{description}</p>
-    </section>
-
-    <section class="wrapper mx-auto p-4 prose">
-      <slot />
-    </section>
+  <main class="wrapper mx-auto px-4 py-8">
+    <article class="prose max-w-none">
+      <h1 class="text-3xl font-bold mb-2">{title}</h1>
+      {description && <p class="text-slate-600 mb-6">{description}</p>}
+      <Content components={components} />
+    </article>
   </main>
 </Layout>

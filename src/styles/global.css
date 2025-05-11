@@ -32,6 +32,19 @@ main {
   min-height: calc(100vh - var(--header-height) - var(--footer-height));
 }
 
+ul,
+ol {
+  margin-inline-start: var(--spacer-md);
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
 .ff-montserrat {
   font-family: Montserrat, Arial, sans-serif;
 }
