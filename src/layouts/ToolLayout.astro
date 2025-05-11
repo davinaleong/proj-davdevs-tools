@@ -7,11 +7,19 @@ const components = Astro.props.components || {};
 ---
 
 <Layout>
-  <main class="wrapper mx-auto px-4 py-8">
-    <article class="prose max-w-none">
-      <h1 class="text-3xl font-bold mb-2">{title}</h1>
-      {description && <p class="text-slate-600 mb-6">{description}</p>}
-      <Content components={components} />
-    </article>
+  <main class="relative overflow-hidden bg-slate-100 bg-f">
+    <section class="bg-blue-500 bg-h p-4">
+			<div class="wrapper mx-auto text-center text-black flow">
+				<h1 class="text-5xl text-bold">{title}</h1>
+
+				{ description && <p>{description}</p> }
+			</div>
+		</section>
+
+    <section>
+			<article class="prose max-w-none p-4 flow">
+        <Content components={components} />
+      </article>
+		</section>
   </main>
 </Layout>
