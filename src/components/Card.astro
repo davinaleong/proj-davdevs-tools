@@ -1,0 +1,10 @@
+---
+const { tool } = Astro.props;
+---
+<article class="p-4 shadow-md rounded flow">
+    <h2 class="text-xl font-bold">{tool.data.title}</h2>
+    
+    <p>{tool.data.description}</p>
+
+    <p><a class="text-blue-500 hover:text-blue-700" href={`/tools/${tool.id}`}>Go &gt;&gt;</a></p>
+</article>

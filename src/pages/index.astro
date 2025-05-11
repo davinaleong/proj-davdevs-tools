@@ -1,11 +1,35 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import {
+  getSecret,
+ } from 'astro:env/server'
+import { getCollection } from 'astro:content';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from './../layouts/Layout.astro'
+import Card from './../components/Card.astro'
+
+const APP_NAME = getSecret("APP_NAME")
+
+const publishedTools = await getCollection('tools', ({ data }) => {
+  return data.draft === false;
+});
 ---
 
 <Layout>
-	<Welcome />
+	<main class="relative overflow-hidden bg-slate-100">
+		<section class="bg-blue-500 p-4">
+			<div class="wrapper mx-auto text-center text-white flow">
+				<h1 class="text-5xl text-bold">{APP_NAME}</h1>
+
+				<p>
+					DavTools is a collection of simple, useful web tools built to make everyday tasks easier — from generating QR codes to checking password strength and exploring color palettes. Designed and developed by Davina Leong, this microsite offers a fast, clean, and intuitive experience powered by modern web technologies.
+				</p>
+			</div>
+		</section>
+
+		<section>
+			<div class="wrapper flow mx-auto p-4">
+				{publishedTools.map(tool => <Card tool={tool} />)}
+			</div>
+		</section>
+	</main>
 </Layout>

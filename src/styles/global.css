@@ -19,10 +19,17 @@
   --spacer-md: theme("spacing.4");
 
   --wrapper-width: theme("screens.lg");
+
+  --header-height: 60px;
+  --footer-height: 56px;
 }
 
 body {
   font-family: var(--ff-primary);
+}
+
+main {
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
 }
 
 .ff-montserrat {
@@ -35,4 +42,27 @@ body {
 
 .flow > * + * {
   margin-block-start: var(--spacer-md);
+}
+
+.top-decoration,
+.bottom-decoration {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  z-index: -1;
+}
+
+.top-decoration {
+  top: 0;
+  background-image: url("./../assets/images/bg-h-d.svg");
+  background-position: center bottom;
+}
+
+.bottom-decoration {
+  bottom: 0;
+  background-image: url("./../assets/images/bg-f-d.svg");
+  background-position: center top;
 }
