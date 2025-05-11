@@ -1,9 +1,7 @@
 ---
 import Layout from './Layout.astro';
 
-const { title, description } = Astro.props;
-const Content = Astro.props.content;
-const components = Astro.props.components || {};
+const { title, description, date } = Astro.props
 ---
 
 <Layout>
@@ -13,12 +11,14 @@ const components = Astro.props.components || {};
 				<h1 class="text-5xl text-bold">{title}</h1>
 
 				{ description && <p>{description}</p> }
+
+        { date && <p class="text-sm italic">{date}</p>}
 			</div>
 		</section>
 
     <section>
 			<article class="prose max-w-none p-4 flow">
-        <Content components={components} />
+        <slot />
       </article>
 		</section>
   </main>
