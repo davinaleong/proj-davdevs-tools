@@ -4,9 +4,3 @@ description: "🎨 Explore and copy beautiful color palettes from basics to Boot
 date: "11 May 2025"
 draft: false
 ---
-
-<h2>Color Palettes</h2>
-
-<div>
-    &lt;Add color palettes input and interaction.&gt;
-</div>
