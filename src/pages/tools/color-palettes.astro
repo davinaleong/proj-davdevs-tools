@@ -1,13 +1,93 @@
 ---
+import React from 'react'
 import { getEntry } from 'astro:content'
+import ColorPalettes, { ColorGroup } from './../../components/react/ColorPalettes'
 import ToolLayout from './../../layouts/ToolLayout.astro'
-import ColorPalette from '../../components/react/ColorPalette'
 
 const entry = await getEntry('tools', 'color-palettes')
 
 if (!entry) {
   throw new Error('Could not find entry')
 }
+
+const groups: ColorGroup[] = [
+  {
+    groupTitle: 'Basic Colors',
+    colors: [
+      { title: 'White', value: '#ffffff', textColor: '#000', bgColor: '#ffffff' },
+      { title: 'Black', value: '#000000', textColor: '#fff', bgColor: '#000000' },
+      { title: 'Grey', value: '#888888', textColor: '#fff', bgColor: '#888888' },
+      { title: 'Red', value: '#ff0000', textColor: '#fff', bgColor: '#ff0000' },
+      { title: 'Yellow', value: '#fff000', textColor: '#000', bgColor: '#fff000' },
+      { title: 'Green', value: '#00ff00', textColor: '#000', bgColor: '#00ff00' },
+      { title: 'Cyan', value: '#00ffff', textColor: '#000', bgColor: '#00ffff' },
+      { title: 'Blue', value: '#0000ff', textColor: '#fff', bgColor: '#0000ff' },
+      { title: 'Magenta', value: '#ff00ff', textColor: '#fff', bgColor: '#ff00ff' },
+    ],
+  },
+  {
+    groupTitle: 'Pokémon Colors',
+    colors: [
+      { title: 'Bug', value: '#A8B821', textColor: '#000000', bgColor: '#A8B821' },
+      { title: 'Dark', value: '#6F5848', textColor: '#FFFFFF', bgColor: '#6F5848' },
+      { title: 'Dragon', value: '#7038F9', textColor: '#FFFFFF', bgColor: '#7038F9' },
+      { title: 'Electric', value: '#F8D030', textColor: '#000000', bgColor: '#F8D030' },
+      { title: 'Fairy', value: '#FFAEC9', textColor: '#000000', bgColor: '#FFAEC9' },
+      { title: 'Fighting', value: '#C03028', textColor: '#FFFFFF', bgColor: '#C03028' },
+      { title: 'Fire', value: '#F07F2F', textColor: '#000000', bgColor: '#F07F2F' },
+      { title: 'Flying', value: '#A890F0', textColor: '#000000', bgColor: '#A890F0' },
+      { title: 'Ghost', value: '#715899', textColor: '#FFFFFF', bgColor: '#715899' },
+      { title: 'Grass', value: '#78C750', textColor: '#000000', bgColor: '#78C750' },
+      { title: 'Ground', value: '#DEBF67', textColor: '#000000', bgColor: '#DEBF67' },
+      { title: 'Ice', value: '#98D8D8', textColor: '#000000', bgColor: '#98D8D8' },
+      { title: 'Normal', value: '#A9A878', textColor: '#000000', bgColor: '#A9A878' },
+      { title: 'Poison', value: '#A040A1', textColor: '#FFFFFF', bgColor: '#A040A1' },
+      { title: 'Psychic', value: '#F85788', textColor: '#FFFFFF', bgColor: '#F85788' },
+      { title: 'Rock', value: '#B89F38', textColor: '#FFFFFF', bgColor: '#B89F38' },
+      { title: 'Steel', value: '#B8B8D0', textColor: '#000000', bgColor: '#B8B8D0' },
+      { title: 'Water', value: '#6890F0', textColor: '#000000', bgColor: '#6890F0' },
+    ],
+  },
+  {
+    groupTitle: 'Bootstrap Colors – Colors',
+    colors: [
+      { title: 'Blue (Primary)', value: '#007BFF', textColor: '#FFFFFF', bgColor: '#007BFF' },
+      { title: 'Indigo', value: '#6610F2', textColor: '#FFFFFF', bgColor: '#6610F2' },
+      { title: 'Purple', value: '#6F42C1', textColor: '#FFFFFF', bgColor: '#6F42C1' },
+      { title: 'Pink', value: '#E83E8C', textColor: '#FFFFFF', bgColor: '#E83E8C' },
+      { title: 'Red (Danger)', value: '#DC3545', textColor: '#FFFFFF', bgColor: '#DC3545' },
+      { title: 'Orange', value: '#FD7E14', textColor: '#000000', bgColor: '#FD7E14' },
+      { title: 'Yellow (Warning)', value: '#FFC107', textColor: '#000000', bgColor: '#FFC107' },
+      { title: 'Green (Success)', value: '#28A745', textColor: '#000000', bgColor: '#28A745' },
+      { title: 'Teal', value: '#20C997', textColor: '#000000', bgColor: '#20C997' },
+      { title: 'Cyan (Info)', value: '#17A2B8', textColor: '#FFFFFF', bgColor: '#17A2B8' },
+    ],
+  },
+  {
+    groupTitle: 'Bootstrap Colors – Neutral',
+    colors: [
+      { title: '100 (Light)', value: '#F8F9FA', textColor: '#000000', bgColor: '#F8F9FA' },
+      { title: '200', value: '#E9ECEF', textColor: '#000000', bgColor: '#E9ECEF' },
+      { title: '300', value: '#DEE2E6', textColor: '#000000', bgColor: '#DEE2E6' },
+      { title: '400', value: '#CED4DA', textColor: '#000000', bgColor: '#CED4DA' },
+      { title: '500', value: '#ADB5BD', textColor: '#000000', bgColor: '#ADB5BD' },
+      { title: '600 (Secondary)', value: '#6C757D', textColor: '#FFFFFF', bgColor: '#6C757D' },
+      { title: '700', value: '#495057', textColor: '#FFFFFF', bgColor: '#495057' },
+      { title: '800', value: '#343A40', textColor: '#FFFFFF', bgColor: '#343A40' },
+      { title: '900 (Dark)', value: '#212529', textColor: '#FFFFFF', bgColor: '#212529' },
+    ],
+  },
+  {
+    groupTitle: 'Tailwind Colors',
+    colors: [
+      { title: 'Slate-500', value: '#64748b', textColor: '#fff', bgColor: '#64748b' },
+      { title: 'Blue-500', value: '#3b82f6', textColor: '#fff', bgColor: '#3b82f6' },
+      { title: 'Green-500', value: '#22c55e', textColor: '#000', bgColor: '#22c55e' },
+      { title: 'Yellow-500', value: '#eab308', textColor: '#000', bgColor: '#eab308' },
+      { title: 'Red-500', value: '#ef4444', textColor: '#fff', bgColor: '#ef4444' },
+    ],
+  },
+]
 
 const { data } = entry;
 const { title, description, date } = data
@@ -31,6 +111,6 @@ const { title, description, date } = data
     </p>
 
   <div class="mt-4">
-    <ColorPalette client:load />
+    <ColorPalettes groups={groups} />
   </div>
 </ToolLayout>
