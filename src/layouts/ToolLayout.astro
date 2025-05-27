@@ -6,7 +6,7 @@ const { title, description, date } = Astro.props
 
 <Layout>
   <main class="relative overflow-hidden bg-slate-100 bg-f">
-    <section class="bg-blue-500 bg-h p-4">
+    <header class="bg-blue-500 bg-h p-4">
 			<div class="wrapper mx-auto text-center text-black flow">
 				<h1 class="text-5xl text-bold">{title}</h1>
 
@@ -14,12 +14,20 @@ const { title, description, date } = Astro.props
 
         { date && <p class="text-sm italic">{date}</p>}
 			</div>
-		</section>
+		</header>
 
     <section>
 			<article class="wrapper mx-auto prose max-w-none p-4 flow">
         <slot />
       </article>
 		</section>
+
+    <footer>
+      <p class="text-center">
+        <a href="/" class="text-white hover:underline">
+          &lt;&lt; Back
+        </a>
+      </p>
+    </footer>
   </main>
 </Layout>
