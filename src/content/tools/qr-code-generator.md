@@ -4,9 +4,3 @@ description: "📱 Instantly generate scannable QR codes with ease — fast, res
 date: "11 May 2025"
 draft: false
 ---
-
-<h2>QR Code Generator</h2>
-
-<div>
-    &lt;Add QR code input and interaction.&gt;
-</div>
