@@ -1,5 +1,7 @@
 # DavTools Microsite
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/73e893cf-0af5-48f3-93c2-573b8a7ab2ca/deploy-status)](https://app.netlify.com/projects/davdevstools/deploys)
+
 Welcome to the **DavTools Microsite** — a collection of practical, everyday web tools built to make your life easier!
 From QR code generators to password strength meters, this site offers sleek, efficient tools powered by a modern web stack.
 
