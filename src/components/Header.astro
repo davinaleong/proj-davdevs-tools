@@ -5,12 +5,11 @@ import {
 import logo from "./../assets/images/Logo - Coloured.svg"
 import { Image } from 'astro:assets'
 
-const APP_NAME = getSecret("APP_NAME")
-const APP_DEVDEVS = getSecret("APP_DEVDEVS")
+const APP_NAME = await getSecret("APP_NAME")
 ---
 <header class="text-white bg-blue-500 p-2 static">
     <nav class="wrapper flex items-center justify-between mx-auto gap-4">
-        <a class="font-semibold" href={APP_DEVDEVS}>
+        <a class="font-semibold" href="https://davdevsportfolio.netlify.app/" target="_blank">
             Back to Portfolio
         </a>
 
