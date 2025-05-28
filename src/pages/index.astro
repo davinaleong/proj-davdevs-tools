@@ -18,7 +18,7 @@ const publishedTools = await getCollection('tools', ({ data }) => {
 	<main class="relative overflow-hidden bg-slate-100 bg-f">
 		<section class="bg-blue-500 bg-h p-4">
 			<div class="wrapper mx-auto text-center text-black flow">
-				<h1 class="text-5xl text-bold">{APP_NAME}</h1>
+				<h1 class="text-5xl font-bold">{APP_NAME}</h1>
 
 				<p>
 					{APP_NAME} is a collection of simple, useful web tools built to make everyday tasks easier — from generating QR codes to checking password strength and exploring color palettes. Designed and developed by Davina Leong, this microsite offers a fast, clean, and intuitive experience powered by modern web technologies.
@@ -27,7 +27,7 @@ const publishedTools = await getCollection('tools', ({ data }) => {
 		</section>
 
 		<section>
-			<div class="wrapper grid grid-cols-2 gap-4 flow mx-auto p-4">
+			<div class="wrapper grid md:grid-cols-2 gap-4 flow mx-auto p-4">
 				{publishedTools.map(tool => <Card tool={tool} />)}
 			</div>
 		</section>
