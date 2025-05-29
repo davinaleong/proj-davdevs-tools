@@ -1,0 +1,40 @@
+---
+import { getEntry } from 'astro:content'
+import ToolLayout from './../../layouts/ToolLayout.astro'
+import DuplicateParagraphScanner from '../../components/react/DuplicatedParagraphScanner'
+
+const entry = await getEntry('tools', 'duplicated-paragraph-scanner')
+
+if (!entry) {
+  throw new Error('Could not find entry')
+}
+
+const { data } = entry;
+const { title, description, date } = data
+---
+
+<ToolLayout title={title} description={description} date={date}>
+  <h2 class="text-3xl font-bold">📝 Duplicated Paragraph Scanner</h2>
+
+<p class="mt-2">
+  Quickly spot repeated blocks of text in your content. This tool helps you clean up redundancy and improve readability — no plagiarism checks, just better writing!
+</p>
+
+<ul class="list-disc list-inside mt-4 space-y-1">
+  <li>Paste or type your paragraphs into the input field</li>
+  <li>Click the scan button to analyze your content</li>
+  <li>Identifies exact duplicate paragraphs across the text</li>
+  <li>Highlights duplicates so you can review and revise</li>
+  <li>No external checks or internet access needed</li>
+  <li>Simple, fast, and works right in your browser</li>
+</ul>
+
+<p class="mt-4">
+  Ideal for writers, editors, students, and developers who want to polish their work by removing repetition and improving flow — all without leaving your page.
+</p>
+
+<div class="mt-4">
+    <DuplicateParagraphScanner client:load />
+</div>
+</ToolLayout>
+
