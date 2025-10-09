@@ -1,0 +1,39 @@
+---
+import React from 'react'
+import { getEntry } from 'astro:content'
+import ToolLayout from './../../layouts/ToolLayout.astro'
+import Calculator from '../../components/react/Calculator'
+
+const entry = await getEntry('tools', 'calculator')
+
+if (!entry) {
+  throw new Error('Could not find entry')
+}
+
+const { data } = entry;
+const { title, description, date } = data
+---
+
+<ToolLayout title={title} description={description} date={date}>
+  <h2 class="text-3xl font-bold">🧮 Calculator</h2>
+
+  <p>A lightweight and responsive calculator designed for quick and accurate everyday calculations. Built with HTML, CSS, and TypeScript, this tool combines simplicity with precision to handle basic arithmetic operations with ease.</p>
+
+  <h3>✨ Features</h3>
+
+  <ul class="list-disc list-inside mt-4 space-y-1">
+    <li>Instant Results: Perform addition, subtraction, multiplication, and division effortlessly.</li>
+    <li>Keyboard Support: Enter values directly using your keyboard for faster input.</li>
+    <li>Error Handling: Prevents invalid operations and ensures smooth user experience.</li>
+    <li>Responsive Design: Optimized for both desktop and mobile users.</li>
+    <li>Clean Interface: Minimal, clutter-free layout for focus and usability.</li>
+  </ul>
+
+  <h3>💡 Perfect For</h3>
+
+  <p>Students, professionals, and anyone who needs a quick and reliable on-the-go calculator.</p>
+
+  <div class="mt-4">
+      <Calculator client:load />
+  </div>
+</ToolLayout>
