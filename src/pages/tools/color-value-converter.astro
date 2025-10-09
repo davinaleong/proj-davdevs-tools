@@ -1,0 +1,39 @@
+---
+import React from 'react'
+import { getEntry } from 'astro:content'
+import ToolLayout from './../../layouts/ToolLayout.astro'
+import ColorValueConverter from '../../components/react/ColorValueConverter'
+
+const entry = await getEntry('tools', 'color-value-converter')
+
+if (!entry) {
+  throw new Error('Could not find entry')
+}
+
+const { data } = entry;
+const { title, description, date } = data
+---
+
+<ToolLayout title={title} description={description} date={date}>
+  <h2 class="text-2xl font-bold mb-4">{title}</h2>
+
+  <p>A lightweight and responsive tool that instantly converts HEX color codes to RGB values (and vice versa). Built with HTML, CSS, and TypeScript, this converter is designed for speed, precision, and usability—perfect for developers, designers, and digital artists working with web color systems.</p>
+
+  <h3 class="text-xl font-semibold mt-6 mb-2">✨ Features</h3>
+
+  <ul class="list-disc list-inside mb-4">
+    <li>Instant conversion between HEX and RGB color formats.</li>
+    <li>User-friendly interface with real-time feedback.</li>
+    <li>Responsive design for seamless use on any device.</li>
+    <li>Lightweight and fast, ensuring quick performance.</li>
+    <li>Built with modern web technologies: HTML, CSS, and TypeScript.</li>
+  </ul>
+
+  <h3 class="text-xl font-semibold mt-6 mb-2">🚀 Who is it for?</h3>
+
+  <p>Web designers, front-end developers, and anyone who frequently works with color codes in digital projects.</p>
+
+  <div class="mt-4">
+      <ColorValueConverter client:load />
+  </div>
+</ToolLayout>
