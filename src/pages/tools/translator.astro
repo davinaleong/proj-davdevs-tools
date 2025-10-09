@@ -1,0 +1,54 @@
+---
+import React from 'react'
+import { getEntry } from 'astro:content'
+import ToolLayout from './../../layouts/ToolLayout.astro'
+import Translator from '../../components/react/Translator'
+
+const entry = await getEntry('tools', 'color-value-converter')
+
+if (!entry) {
+  throw new Error('Could not find entry')
+}
+
+const { data } = entry;
+const { title, description, date } = data
+---
+
+<ToolLayout title={title} description={description} date={date}>
+    <h2 class="text-2xl font-bold mb-4">{title}</h2>
+
+    <p>Have you ever written something that sounds too robotic or stiff? This tool helps you turn plain English into smooth, natural language — just like how people actually speak and write.</p>
+
+    <h3 class="text-xl font-semibold mt-6 mb-2">✨ Features</h3>
+
+    <ul>
+        <li>Transforms formal or awkward text into conversational, engaging language.</li>
+        <li>Supports multiple tones: casual, professional, friendly, and more.</li>
+        <li>Easy-to-use interface with instant results.</li>
+        <li>Perfect for writers, students, developers, and anyone wanting better communication.</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6 mb-2">🚀 Who is it for?</h3>
+
+    <ul>
+        <li>Writers looking to improve their style and flow.</li>
+        <li>Students needing help with essays and assignments.</li>
+        <li>Professionals aiming for clearer, more relatable communication.</li>
+        <li>Developers creating user-friendly content for apps and websites.</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6 mb-2">⚡ How it works</h3>
+
+    <ul>
+        <li>Input your text into the tool.</li>
+        <li>Select your desired tone and style.</li>
+        <li>Click "Transform" to see your text rewritten in a natural, human-like way.</li>
+        <li>Copy and use the improved text wherever you need it!</li>
+    </ul>
+
+    <p>Bring your words to life — clear, natural, and human.</p>
+
+    <div class="mt-4">
+        <Translator client:load />
+    </div>
+</ToolLayout>
