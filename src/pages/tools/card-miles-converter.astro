@@ -1,0 +1,58 @@
+---
+import React from 'react'
+import { getEntry } from 'astro:content'
+import ToolLayout from './../../layouts/ToolLayout.astro'
+import CardMilesConverter from '../../components/react/CardMilesConverter'
+
+const entry = await getEntry('tools', 'card-miles-converter')
+
+if (!entry) {
+  throw new Error('Could not find entry')
+}
+
+const { data } = entry;
+const { title, description, date } = data
+---
+
+<ToolLayout title={title} description={description} date={date}>
+  <h2 class="text-3xl font-bold">✈️ Card Miles Converter</h2>
+
+  <div class="mt-6 mb-8 prose prose-gray max-w-none">
+    <p class="text-lg text-gray-600 mb-4">
+      Maximize the value of your credit card rewards and airline loyalty points with our comprehensive converter tool. 
+      Whether you're planning your next vacation or looking to optimize your reward strategy, this tool helps you 
+      make informed decisions about your points and miles.
+    </p>
+    
+    <div class="grid md:grid-cols-2 gap-6 my-6">
+      <div class="bg-blue-50 p-4 rounded-sm">
+        <h3 class="font-semibold text-blue-900 mb-2">🏆 Key Features</h3>
+        <ul class="text-sm text-blue-800 space-y-1">
+          <li>• Convert between major airline programs</li>
+          <li>• Calculate cash equivalent values</li>
+          <li>• Compare redemption rates</li>
+          <li>• Track multiple loyalty accounts</li>
+        </ul>
+      </div>
+      
+      <div class="bg-green-50 p-4 rounded-sm">
+        <h3 class="font-semibold text-green-900 mb-2">💡 Perfect For</h3>
+        <ul class="text-sm text-green-800 space-y-1">
+          <li>• Travel enthusiasts and frequent flyers</li>
+          <li>• Credit card rewards optimizers</li>
+          <li>• Business travelers managing expenses</li>
+          <li>• Anyone planning award travel</li>
+        </ul>
+      </div>
+    </div>
+    
+    <p class="bg-white p-4 rounded-sm text-gray-600">
+      Simply enter your points or miles amount, select your program, and discover the best ways to use your rewards. 
+      Our tool supports major airlines, hotel chains, and credit card programs to give you comprehensive conversion options.
+    </p>
+  </div>
+
+  <div class="mt-4">
+      <CardMilesConverter client:load />
+  </div>
+</ToolLayout>
