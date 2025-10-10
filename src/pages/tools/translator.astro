@@ -4,7 +4,7 @@ import { getEntry } from 'astro:content'
 import ToolLayout from './../../layouts/ToolLayout.astro'
 import Translator from '../../components/react/Translator'
 
-const entry = await getEntry('tools', 'color-value-converter')
+const entry = await getEntry('tools', 'translator')
 
 if (!entry) {
   throw new Error('Could not find entry')
