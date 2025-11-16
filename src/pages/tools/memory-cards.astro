@@ -14,8 +14,157 @@ const { data } = entry;
 const { title, description, date } = data
 ---
 <ToolLayout title={title} description={description} date={date}>
-  <h2 class="text-3xl font-bold">🃏 Memory Cards</h2>
+  <h2 class="text-3xl font-bold">🧠 Memory Cards</h2>
+  <p class="text-gray-600 mt-2">Test and improve your memory with this endless card matching game</p>
 
-  <div class="mt-4">
+  <div class="mt-6">
       <MemoryCards client:load />
+  </div>
+
+  <div class="mt-8 space-y-6">
+    <section>
+      <h3 class="text-2xl font-semibold mb-4">How to Play</h3>
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <ol class="list-decimal list-inside space-y-3 text-gray-700">
+          <li><strong>Start the game</strong> - Click "Start Game" to begin at level 1</li>
+          <li><strong>Flip cards</strong> - Click on any face-down card to reveal its icon</li>
+          <li><strong>Find matches</strong> - Try to find pairs of cards with matching icons</li>
+          <li><strong>Complete the level</strong> - Match all pairs before time runs out</li>
+          <li><strong>Progress</strong> - Successfully complete levels to advance to harder challenges</li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="text-2xl font-semibold mb-4">Game Features</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-blue-50 p-4 rounded-lg">
+          <h4 class="font-semibold text-blue-800 mb-2">🎯 Endless Progression</h4>
+          <p class="text-blue-700">Infinite levels with increasing difficulty. Each level adds more cards and reduces time limits.</p>
+        </div>
+        
+        <div class="bg-green-50 p-4 rounded-lg">
+          <h4 class="font-semibold text-green-800 mb-2">⏱️ Time Challenge</h4>
+          <p class="text-green-700">Beat the clock! Each level has a time limit that gets more challenging as you progress.</p>
+        </div>
+        
+        <div class="bg-purple-50 p-4 rounded-lg">
+          <h4 class="font-semibold text-purple-800 mb-2">🎨 Beautiful Icons</h4>
+          <p class="text-purple-700">50+ unique Lucide icons provide variety and visual appeal across all levels.</p>
+        </div>
+        
+        <div class="bg-orange-50 p-4 rounded-lg">
+          <h4 class="font-semibold text-orange-800 mb-2">📊 Performance Tracking</h4>
+          <p class="text-orange-700">Monitor your moves, score, and progress with real-time statistics.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="text-2xl font-semibold mb-4">Difficulty Progression</h3>
+      <div class="bg-gradient-to-r from-green-50 to-red-50 p-6 rounded-lg">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="font-medium">Level 1-3</span>
+            <div class="flex-1 mx-4 h-2 bg-green-200 rounded-full">
+              <div class="h-full w-1/4 bg-green-500 rounded-full"></div>
+            </div>
+            <span class="text-sm text-gray-600">Easy - 4-8 cards</span>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <span class="font-medium">Level 4-7</span>
+            <div class="flex-1 mx-4 h-2 bg-yellow-200 rounded-full">
+              <div class="h-full w-1/2 bg-yellow-500 rounded-full"></div>
+            </div>
+            <span class="text-sm text-gray-600">Medium - 10-14 cards</span>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <span class="font-medium">Level 8+</span>
+            <div class="flex-1 mx-4 h-2 bg-red-200 rounded-full">
+              <div class="h-full w-3/4 bg-red-500 rounded-full"></div>
+            </div>
+            <span class="text-sm text-gray-600">Hard - 16+ cards</span>
+          </div>
+        </div>
+        
+        <p class="text-gray-600 mt-4 text-sm">
+          <strong>Pro tip:</strong> The game scales intelligently - more cards mean longer time limits, but the time per card decreases as levels increase!
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="text-2xl font-semibold mb-4">Memory Training Benefits</h3>
+      <div class="bg-indigo-50 p-6 rounded-lg">
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="text-center">
+            <div class="text-3xl mb-2">🧠</div>
+            <h4 class="font-semibold text-indigo-800">Working Memory</h4>
+            <p class="text-indigo-700 text-sm">Strengthen your ability to hold and manipulate information</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="text-3xl mb-2">⚡</div>
+            <h4 class="font-semibold text-indigo-800">Processing Speed</h4>
+            <p class="text-indigo-700 text-sm">Improve how quickly you can process visual information</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="text-3xl mb-2">🎯</div>
+            <h4 class="font-semibold text-indigo-800">Concentration</h4>
+            <p class="text-indigo-700 text-sm">Enhance focus and attention to detail under pressure</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="text-2xl font-semibold mb-4">Scoring System</h3>
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <div class="space-y-3">
+          <div class="flex justify-between items-center">
+            <span>Base points per match:</span>
+            <code class="bg-gray-200 px-2 py-1 rounded">100 × current level</code>
+          </div>
+          <div class="flex justify-between items-center">
+            <span>Time bonus:</span>
+            <code class="bg-gray-200 px-2 py-1 rounded">remaining seconds ÷ 10</code>
+          </div>
+          <div class="flex justify-between items-center">
+            <span>Level completion:</span>
+            <code class="bg-gray-200 px-2 py-1 rounded">Sum of all matches in level</code>
+          </div>
+        </div>
+        <p class="text-gray-600 mt-4 text-sm">
+          Higher levels yield more points, but you'll need to be faster and more accurate to maximize your score!
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="text-2xl font-semibold mb-4">Tips & Strategies</h3>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="bg-yellow-50 p-4 rounded-lg">
+          <h4 class="font-semibold text-yellow-800 mb-2">🎯 Pattern Recognition</h4>
+          <p class="text-yellow-700 text-sm">Try to remember the positions of cards you've seen to make matches more efficiently.</p>
+        </div>
+        
+        <div class="bg-pink-50 p-4 rounded-lg">
+          <h4 class="font-semibold text-pink-800 mb-2">⏰ Time Management</h4>
+          <p class="text-pink-700 text-sm">Don't rush early flips - take time to remember card positions for better matches.</p>
+        </div>
+        
+        <div class="bg-cyan-50 p-4 rounded-lg">
+          <h4 class="font-semibold text-cyan-800 mb-2">🗂️ Mental Organization</h4>
+          <p class="text-cyan-700 text-sm">Group similar icons mentally (animals, objects, symbols) to improve recall.</p>
+        </div>
+        
+        <div class="bg-emerald-50 p-4 rounded-lg">
+          <h4 class="font-semibold text-emerald-800 mb-2">🔄 Practice Regularly</h4>
+          <p class="text-emerald-700 text-sm">Consistent practice improves memory performance and pattern recognition skills.</p>
+        </div>
+      </div>
+    </section>
   </div>
