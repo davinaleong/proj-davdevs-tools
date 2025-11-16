@@ -1,0 +1,21 @@
+---
+import React from 'react'
+import { getEntry } from 'astro:content'
+import ToolLayout from './../../layouts/ToolLayout.astro'
+import MemoryCards from '../../components/react/MemoryCards'
+
+const entry = await getEntry('tools', 'memory-cards')
+
+if (!entry) {
+  throw new Error('Could not find entry')
+}
+
+const { data } = entry;
+const { title, description, date } = data
+---
+<ToolLayout title={title} description={description} date={date}>
+  <h2 class="text-3xl font-bold">🃏 Memory Cards</h2>
+
+  <div class="mt-4">
+      <MemoryCards client:load />
+  </div>
