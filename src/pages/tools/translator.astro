@@ -17,6 +17,10 @@ const { title, description, date } = data
 <ToolLayout title={title} description={description} date={date}>
     <h2 class="text-2xl font-bold mb-4">{title}</h2>
 
+    <div class="mt-4">
+        <Translator client:load />
+    </div>
+
     <p>Have you ever written something that sounds too robotic or stiff? This tool helps you turn plain English into smooth, natural language — just like how people actually speak and write.</p>
 
     <h3 class="text-xl font-semibold mt-6 mb-2">✨ Features</h3>
@@ -47,8 +51,4 @@ const { title, description, date } = data
     </ul>
 
     <p>Bring your words to life — clear, natural, and human.</p>
-
-    <div class="mt-4">
-        <Translator client:load />
-    </div>
 </ToolLayout>

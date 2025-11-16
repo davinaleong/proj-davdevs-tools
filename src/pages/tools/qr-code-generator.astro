@@ -16,6 +16,10 @@ const { title, description, date } = data
 <ToolLayout title={title} description={description} date={date}>
   <h2 class="text-3xl font-bold">📱 Generate a Custom QR Code</h2>
 
+  <div class="mt-4">
+    <QrCodeGenerator client:load />
+  </div>
+
   <p class="mt-2">Quickly create QR codes for URLs, messages, or any text. This tool lets you:</p>
 
   <ul class="list-disc list-inside mt-2">
@@ -25,8 +29,4 @@ const { title, description, date } = data
   </ul>
 
   <p class="mt-4">Great for printing, sharing, or embedding on your site.</p>
-
-  <div class="mt-4">
-    <QrCodeGenerator client:load />
-  </div>
 </ToolLayout>

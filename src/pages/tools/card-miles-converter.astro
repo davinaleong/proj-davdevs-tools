@@ -17,6 +17,10 @@ const { title, description, date } = data
 <ToolLayout title={title} description={description} date={date}>
   <h2 class="text-3xl font-bold">✈️ Card Miles Converter</h2>
 
+  <div class="mt-4">
+      <CardMilesConverter client:load />
+  </div>
+
   <div class="mt-6 mb-8 prose prose-gray max-w-none">
     <p class="text-lg text-gray-600 mb-4">
       Maximize the value of your credit card rewards and airline loyalty points with our comprehensive converter tool. 
@@ -50,9 +54,5 @@ const { title, description, date } = data
       Simply enter your points or miles amount, select your program, and discover the best ways to use your rewards. 
       Our tool supports major airlines, hotel chains, and credit card programs to give you comprehensive conversion options.
     </p>
-  </div>
-
-  <div class="mt-4">
-      <CardMilesConverter client:load />
   </div>
 </ToolLayout>

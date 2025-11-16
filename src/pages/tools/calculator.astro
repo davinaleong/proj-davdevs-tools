@@ -17,6 +17,10 @@ const { title, description, date } = data
 <ToolLayout title={title} description={description} date={date}>
   <h2 class="text-3xl font-bold">🧮 Calculator</h2>
 
+  <div class="mt-4">
+      <Calculator client:load />
+  </div>
+
   <p>A lightweight and responsive calculator designed for quick and accurate everyday calculations. Built with HTML, CSS, and TypeScript, this tool combines simplicity with precision to handle basic arithmetic operations with ease.</p>
 
   <h3>✨ Features</h3>
@@ -32,8 +36,4 @@ const { title, description, date } = data
   <h3>💡 Perfect For</h3>
 
   <p>Students, professionals, and anyone who needs a quick and reliable on-the-go calculator.</p>
-
-  <div class="mt-4">
-      <Calculator client:load />
-  </div>
 </ToolLayout>

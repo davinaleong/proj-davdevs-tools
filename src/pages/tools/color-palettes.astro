@@ -18,21 +18,21 @@ const { title, description, date } = data
 <ToolLayout title={title} description={description} date={date}>
   <h2 class="text-3xl font-bold">🎨 Explore Color Palettes</h2>
 
-    <p class="mt-2">
-    Quickly browse and copy color swatches for use in your projects. This palette viewer lets you:
-    </p>
-
-    <ul class="list-disc list-inside mt-2">
-    <li>View common color values like HEX</li>
-    <li>Preview contrast with text on each color</li>
-    <li>Use them in web, UI, or graphic design work</li>
-    </ul>
-
-    <p class="mt-4">
-    Perfect for developers, designers, or anyone needing a handy color reference.
-    </p>
-
   <div class="mt-4">
     <ColorPalettes groups={colorGroups} client:load />
   </div>
+
+  <p class="mt-2">
+  Quickly browse and copy color swatches for use in your projects. This palette viewer lets you:
+  </p>
+
+  <ul class="list-disc list-inside mt-2">
+  <li>View common color values like HEX</li>
+  <li>Preview contrast with text on each color</li>
+  <li>Use them in web, UI, or graphic design work</li>
+  </ul>
+
+  <p class="mt-4">
+  Perfect for developers, designers, or anyone needing a handy color reference.
+  </p>
 </ToolLayout>
