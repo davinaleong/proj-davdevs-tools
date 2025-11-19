@@ -87,6 +87,41 @@ export default function MemoryCards() {
   const [moves, setMoves] = useState(0)
   const [timeLeft, setTimeLeft] = useState(0)
   const [score, setScore] = useState(0)
+  const [lastLevel, setLastLevel] = useState(0)
+  const [bestScore, setBestScore] = useState(0)
+
+  // Local storage functions
+  const saveProgress = (currentLevel: number, currentScore: number) => {
+    try {
+      localStorage.setItem('memoryCards_lastLevel', currentLevel.toString())
+      localStorage.setItem('memoryCards_bestScore', Math.max(currentScore, bestScore).toString())
+    } catch (error) {
+      // Handle localStorage errors silently
+      console.log('Could not save progress to localStorage')
+    }
+  }
+
+  const loadProgress = () => {
+    try {
+      const savedLevel = localStorage.getItem('memoryCards_lastLevel')
+      const savedScore = localStorage.getItem('memoryCards_bestScore')
+      
+      if (savedLevel) {
+        setLastLevel(parseInt(savedLevel, 10) || 0)
+      }
+      if (savedScore) {
+        setBestScore(parseInt(savedScore, 10) || 0)
+      }
+    } catch (error) {
+      // Handle localStorage errors silently
+      console.log('Could not load progress from localStorage')
+    }
+  }
+
+  // Load progress on component mount
+  useEffect(() => {
+    loadProgress()
+  }, [])
 
   // Calculate game parameters based on level
   const getGameParams = useCallback((currentLevel: number) => {
@@ -219,7 +254,9 @@ export default function MemoryCards() {
 
   // Start next level
   const nextLevel = () => {
-    setLevel(prev => prev + 1)
+    const newLevel = level + 1
+    setLevel(newLevel)
+    saveProgress(newLevel, score)
     initializeGame()
   }
 
@@ -230,6 +267,7 @@ export default function MemoryCards() {
 
   // Reset game to level 1
   const resetGame = () => {
+    saveProgress(level, score)
     setLevel(1)
     setScore(0)
     setGameState('idle')
@@ -275,6 +313,20 @@ export default function MemoryCards() {
           <div className="text-xl font-bold text-red-800">{formatTime(timeLeft)}</div>
         </div>
       </div>
+
+      {/* Previous Records */}
+      {(lastLevel > 0 || bestScore > 0) && (
+        <div className="grid grid-cols-2 gap-4 mb-6">
+          <div className="bg-purple-100 p-3 rounded-sm text-center">
+            <div className="text-sm text-purple-600 font-medium">Last Level Reached</div>
+            <div className="text-xl font-bold text-purple-800">{lastLevel}</div>
+          </div>
+          <div className="bg-yellow-100 p-3 rounded-sm text-center">
+            <div className="text-sm text-yellow-600 font-medium">Best Score</div>
+            <div className="text-xl font-bold text-yellow-800">{bestScore.toLocaleString()}</div>
+          </div>
+        </div>
+      )}
 
       {/* Game State Messages */}
       {gameState === 'idle' && (
