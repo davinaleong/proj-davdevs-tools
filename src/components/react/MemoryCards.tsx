@@ -350,13 +350,13 @@ export default function MemoryCards() {
                 key={card.id}
                 onClick={() => handleCardClick(card.id)}
                 className={`
-                  w-16 h-16 md:w-20 md:h-20 rounded-sm border-2 transition-all duration-300 
-                  flex items-center justify-center relative overflow-hidden
+                  w-16 h-16 md:w-20 md:h-20 rounded-lg border-2 transition-all duration-300 
+                  flex items-center justify-center relative overflow-hidden shadow-md
                   ${card.isMatched 
-                    ? 'bg-green-100 border-green-400 cursor-default' 
+                    ? 'bg-gradient-to-br from-emerald-200 to-green-300 border-emerald-400 cursor-default shadow-green-200' 
                     : isVisible
-                      ? 'bg-blue-100 border-blue-400 cursor-default'
-                      : 'bg-gray-200 border-gray-400 hover:bg-gray-300 cursor-pointer'
+                      ? 'bg-gradient-to-br from-blue-200 to-indigo-300 border-blue-400 cursor-default shadow-blue-200'
+                      : 'bg-gradient-to-br from-purple-200 to-pink-300 border-purple-400 hover:from-purple-300 hover:to-pink-400 cursor-pointer shadow-purple-200'
                   }
                   ${flippedCards.includes(card.id) ? 'animate-pulse' : ''}
                 `}
@@ -365,13 +365,15 @@ export default function MemoryCards() {
                 <div className={`transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
                   <IconComponent 
                     className={`w-8 h-8 md:w-10 md:h-10 ${
-                      card.isMatched ? 'text-green-600' : 'text-blue-600'
+                      card.isMatched ? 'text-emerald-700' : 'text-indigo-700'
                     }`} 
                   />
                 </div>
                 {!isVisible && (
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                    <div className="w-6 h-6 bg-gray-500 rounded-full opacity-30"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-300 to-pink-400 flex items-center justify-center">
+                    <div className="w-8 h-8 bg-white rounded-full opacity-40 flex items-center justify-center">
+                      <div className="w-4 h-4 bg-purple-500 rounded-full opacity-60"></div>
+                    </div>
                   </div>
                 )}
               </button>
